@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="quicksand-bold.ttf">
+            <string>Quicksand-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="XjL-zJ-xlI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yuu Ritzy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-Uq-yzB">
+                                <rect key="frame" x="96" y="549" width="222" height="62.5"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuu_circle" translatesAutoresizingMaskIntoConstraints="NO" id="KSN-jO-0OK">
+                                <rect key="frame" x="76" y="284" width="262" height="245"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="245" id="5gI-Rf-jhi"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="245" id="6OO-va-9bL"/>
+                                    <constraint firstAttribute="width" constant="245" id="ENP-lG-oYe"/>
+                                    <constraint firstAttribute="height" constant="245" id="Lpd-Vv-jxB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstItem="KSN-jO-0OK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="76" id="1GL-yw-g27"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KSN-jO-0OK" secondAttribute="trailing" constant="76" id="5Mi-1O-ioM"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="D1e-EW-dzq"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FIv-AS-KVv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hjm-Uq-yzB" secondAttribute="trailing" constant="96" id="LbP-9S-krA"/>
+                            <constraint firstAttribute="bottom" secondItem="XjL-zJ-xlI" secondAttribute="bottom" id="LgL-uj-y2p"/>
+                            <constraint firstItem="KSN-jO-0OK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="240" id="Lrh-wz-lPD"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Mmu-Xw-bmJ"/>
+                            <constraint firstItem="hjm-Uq-yzB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="96" id="OPF-hN-vLA"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PuF-7Y-XYY"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Ygv-cd-7pf"/>
+                            <constraint firstItem="hjm-Uq-yzB" firstAttribute="top" secondItem="KSN-jO-0OK" secondAttribute="bottom" constant="20" id="sYt-H6-O7z"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Splash" width="720" height="1280"/>
+        <image name="yuu_circle" width="1475" height="1443"/>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
