@@ -19,6 +19,8 @@
 		9A8CDD83284088C700290EBE /* quicksand-light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CDD7E284088C700290EBE /* quicksand-light.ttf */; };
 		9A8CDD84284088C700290EBE /* quicksand-medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9A8CDD7F284088C700290EBE /* quicksand-medium.ttf */; };
 		9A8CDD882840AACF00290EBE /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD872840AACF00290EBE /* FavViewController.swift */; };
+		9A9DE4B52841DCF00008BF75 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */; };
+		9A9DE4B72841EE900008BF75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DE4B62841EE900008BF75 /* SecondViewController.swift */; };
 		9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDFAAD2840AF33004BD884 /* CartViewController.swift */; };
 		9ABDFAB02840B0D1004BD884 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +40,8 @@
 		9A8CDD7E284088C700290EBE /* quicksand-light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "quicksand-light.ttf"; path = "../../../../../../Downloads/RECURSOS APP ANDROID:IOS/Quicksand/static/quicksand-light.ttf"; sourceTree = "<group>"; };
 		9A8CDD7F284088C700290EBE /* quicksand-medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "quicksand-medium.ttf"; path = "../../../../../../Downloads/RECURSOS APP ANDROID:IOS/Quicksand/static/quicksand-medium.ttf"; sourceTree = "<group>"; };
 		9A8CDD872840AACF00290EBE /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
+		9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		9A9DE4B62841EE900008BF75 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9ABDFAAD2840AF33004BD884 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +60,7 @@
 		9A8CDD5928404BF500290EBE = {
 			isa = PBXGroup;
 			children = (
+				9A9DE4B62841EE900008BF75 /* SecondViewController.swift */,
 				9A8CDD6428404BF500290EBE /* AppFinal */,
 				9A8CDD6328404BF500290EBE /* Products */,
 			);
@@ -79,6 +84,7 @@
 				9A8CDD872840AACF00290EBE /* FavViewController.swift */,
 				9ABDFAAD2840AF33004BD884 /* CartViewController.swift */,
 				9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */,
+				9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */,
 				9A8CDD6B28404BF500290EBE /* Main.storyboard */,
 				9A8CDD6E28404BF800290EBE /* Assets.xcassets */,
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
@@ -183,9 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9DE4B72841EE900008BF75 /* SecondViewController.swift in Sources */,
 				9A8CDD6A28404BF500290EBE /* ViewController.swift in Sources */,
 				9ABDFAB02840B0D1004BD884 /* UserViewController.swift in Sources */,
 				9A8CDD6628404BF500290EBE /* AppDelegate.swift in Sources */,
+				9A9DE4B52841DCF00008BF75 /* CollectionViewCell.swift in Sources */,
 				9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */,
 				9A8CDD882840AACF00290EBE /* FavViewController.swift in Sources */,
 				9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */,
