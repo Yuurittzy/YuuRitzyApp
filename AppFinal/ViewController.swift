@@ -23,12 +23,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
     }
+    
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "segue", sender: nil)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // let vc = segue.destination as! SecondViewController
+      let vc = segue.destination as! SecondViewController
+    
        
     }
     

@@ -111,7 +111,6 @@
                                             <outlet property="ivCaja" destination="03j-kF-nps" id="0Rx-Lt-1Bm"/>
                                             <outlet property="myCell" destination="uHK-EW-Jgo" id="5dH-nB-K2C"/>
                                             <outlet property="nameCaja" destination="MvQ-Vd-ezs" id="Wyr-Lw-XaZ"/>
-                                            <segue destination="avy-BJ-tDE" kind="show" identifier="segue" id="1dJ-mB-dW7"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -145,6 +144,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AL6-29-U0H"/>
+                    <connections>
+                        <segue destination="avy-BJ-tDE" kind="show" identifier="segue" id="PEK-Gj-wmX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MX1-c9-qgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,15 +159,6 @@
                     <view key="view" contentMode="scaleToFill" id="i3F-rW-4rS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KHEEEEEEE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EN2-hc-HFq">
-                                <rect key="frame" x="186" y="388" width="91" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kyT-An-73k"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -256,12 +249,23 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YL4-S6-g35">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <navigationBarAppearance key="scrollEdgeAppearance" backgroundImageContentMode="scaleAspectFit">
                             <color key="backgroundColor" name="Purple"/>
                             <textAttributes key="titleTextAttributes">
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </textAttributes>
+                            <barButtonItemAppearance key="backButtonAppearance">
+                                <barButtonItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <color key="textColor" name="Purple"/>
+                                    </textAttributes>
+                                </barButtonItemStateAppearance>
+                                <barButtonItemStateAppearance key="highlighted"/>
+                                <barButtonItemStateAppearance key="disabled"/>
+                                <barButtonItemStateAppearance key="focused"/>
+                            </barButtonItemAppearance>
                         </navigationBarAppearance>
                     </navigationBar>
                     <nil name="viewControllers"/>

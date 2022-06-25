@@ -11,6 +11,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title="Yuu Ritzy"
 
         // Do any additional setup after loading the view.
     }
