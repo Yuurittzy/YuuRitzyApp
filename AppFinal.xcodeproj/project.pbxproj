@@ -21,6 +21,8 @@
 		9A8CDD882840AACF00290EBE /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD872840AACF00290EBE /* FavViewController.swift */; };
 		9A9DE4B52841DCF00008BF75 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */; };
 		9A9DE4B72841EE900008BF75 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A9DE4B62841EE900008BF75 /* SecondViewController.swift */; };
+		9ABD5A8A28690D46004B2D54 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABD5A8928690D46004B2D54 /* DataModel.swift */; };
+		9ABD5A8F2869506F004B2D54 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 9ABD5A8E2869506F004B2D54 /* Cosmos */; };
 		9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDFAAD2840AF33004BD884 /* CartViewController.swift */; };
 		9ABDFAB02840B0D1004BD884 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,7 @@
 		9A8CDD872840AACF00290EBE /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
 		9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		9A9DE4B62841EE900008BF75 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		9ABD5A8928690D46004B2D54 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9ABDFAAD2840AF33004BD884 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -51,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABD5A8F2869506F004B2D54 /* Cosmos in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +89,7 @@
 				9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */,
 				9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */,
 				9A9DE4B62841EE900008BF75 /* SecondViewController.swift */,
+				9ABD5A8928690D46004B2D54 /* DataModel.swift */,
 				9A8CDD6B28404BF500290EBE /* Main.storyboard */,
 				9A8CDD6E28404BF800290EBE /* Assets.xcassets */,
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
@@ -129,6 +134,9 @@
 			dependencies = (
 			);
 			name = AppFinal;
+			packageProductDependencies = (
+				9ABD5A8E2869506F004B2D54 /* Cosmos */,
+			);
 			productName = AppFinal;
 			productReference = 9A8CDD6228404BF500290EBE /* AppFinal.app */;
 			productType = "com.apple.product-type.application";
@@ -157,6 +165,10 @@
 				Base,
 			);
 			mainGroup = 9A8CDD5928404BF500290EBE;
+			packageReferences = (
+				9ABD5A8C28695053004B2D54 /* XCRemoteSwiftPackageReference "AxisRatingBar" */,
+				9ABD5A8D2869506F004B2D54 /* XCRemoteSwiftPackageReference "Cosmos" */,
+			);
 			productRefGroup = 9A8CDD6328404BF500290EBE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -197,6 +209,7 @@
 				9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */,
 				9A8CDD882840AACF00290EBE /* FavViewController.swift in Sources */,
 				9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */,
+				9ABD5A8A28690D46004B2D54 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +431,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9ABD5A8C28695053004B2D54 /* XCRemoteSwiftPackageReference "AxisRatingBar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jasudev/AxisRatingBar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.5.0;
+			};
+		};
+		9ABD5A8D2869506F004B2D54 /* XCRemoteSwiftPackageReference "Cosmos" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/Cosmos.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9ABD5A8E2869506F004B2D54 /* Cosmos */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9ABD5A8D2869506F004B2D54 /* XCRemoteSwiftPackageReference "Cosmos" */;
+			productName = Cosmos;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9A8CDD5A28404BF500290EBE /* Project object */;
 }

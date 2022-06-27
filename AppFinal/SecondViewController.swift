@@ -6,13 +6,20 @@
 //
 
 import UIKit
+import Cosmos
 
 class SecondViewController: UIViewController {
+    
+    @IBOutlet weak var titleCajaDe: UILabel!
+    @IBOutlet weak var starsRating: CosmosView!
+    
+    var personaje : Personaje?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title="Yuu Ritzy"
-
+        starsRating.rating = personaje!.stars
+        titleCajaDe.text = "Caja sorpresa con \n temática de " + personaje!.name.capitalized
         // Do any additional setup after loading the view.
     }
     
