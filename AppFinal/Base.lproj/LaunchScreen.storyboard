@@ -21,9 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="XjL-zJ-xlI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splash" translatesAutoresizingMaskIntoConstraints="NO" id="XjL-zJ-xlI">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yuu_circle" translatesAutoresizingMaskIntoConstraints="NO" id="KSN-jO-0OK">
@@ -35,7 +34,7 @@
                                     <constraint firstAttribute="height" constant="245" id="Lpd-Vv-jxB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yuu Ritzy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-Uq-yzB">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yuu Ritzy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjm-Uq-yzB">
                                 <rect key="frame" x="0.0" y="580.5" width="414" height="62.5"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,10 +44,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <constraints>
                             <constraint firstItem="KSN-jO-0OK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="51a-v3-D43"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mos-Mm-WtO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hjm-Uq-yzB" secondAttribute="trailing" id="OSe-9d-gEn"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="XHO-LV-M30"/>
                             <constraint firstItem="hjm-Uq-yzB" firstAttribute="top" secondItem="KSN-jO-0OK" secondAttribute="bottom" constant="10" id="Z6e-gi-0fb"/>
+                            <constraint firstItem="XjL-zJ-xlI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eaN-vp-CS0"/>
                             <constraint firstItem="hjm-Uq-yzB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mWZ-aq-7oq"/>
                             <constraint firstItem="KSN-jO-0OK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="mjZ-G4-vqi"/>
+                            <constraint firstAttribute="bottom" secondItem="XjL-zJ-xlI" secondAttribute="bottom" id="xtU-P1-QMi"/>
                         </constraints>
                     </view>
                 </viewController>
