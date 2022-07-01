@@ -12,15 +12,48 @@ class SecondViewController: UIViewController {
     
     @IBOutlet weak var titleCajaDe: UILabel!
     @IBOutlet weak var starsRating: CosmosView!
+    @IBOutlet weak var cajaPreview: UIImageView!
+    @IBOutlet weak var precioViejo: UILabel!
+    @IBOutlet weak var precioNuevo: UILabel!
+    @IBOutlet weak var descuentoPorcentaje: UILabel!
+    @IBOutlet weak var btnAgregarACarrito: UIButton!
+    @IBOutlet weak var icFav: UIImageView!
+    
+    @IBAction func clickAgregarAlCarrito(_ sender: Any) {
+        print("se agrego al carrito")
+    
+    }
     
     var personaje : Personaje?
+    var persist = Persist()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         title="Yuu Ritzy"
         starsRating.rating = personaje!.stars
         titleCajaDe.text = "Caja sorpresa con \n temática de " + personaje!.name.capitalized
-        // Do any additional setup after loading the view.
+        cajaPreview.image = UIImage(named:  personaje!.name + "Preview")
+        precioViejo.text = "$ " + String(personaje!.price)
+        precioNuevo.text = "$ " + String(personaje!.price - personaje!.price * personaje!.discount/100)
+        descuentoPorcentaje.text = String(personaje!.discount) + "% OFF"
+        
+        // AL HACER TAP EN EL ICONO DE FAV SE CREAN LAS VARIABLES PARA FORMAR LA ACCION
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SecondViewController.tappedMe))
+        icFav.addGestureRecognizer(tap)
+        icFav.isUserInteractionEnabled = true
+    }
+    
+    
+    @objc func tappedMe()
+    {
+        if (icFav.image == UIImage(systemName:"suit.heart.fill")){
+            icFav.image = UIImage(systemName:"suit.heart")
+        }else{
+            let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
+            persist.guardaEnFav(personaje!.name.capitalized, personaje!.stars, precioFinal)
+            icFav.image = UIImage(systemName:"suit.heart.fill")
+        }
+        
     }
     
 

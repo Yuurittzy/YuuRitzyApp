@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A03ACE6286EA5FB00E3DB2D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A03ACE5286EA5FB00E3DB2D /* CoreData.framework */; };
+		9A03ACE9286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */; };
+		9A03ACEB286ECCC800E3DB2D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A03ACEA286ECCC700E3DB2D /* CoreData.swift */; };
 		9A8CDD6628404BF500290EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6528404BF500290EBE /* AppDelegate.swift */; };
 		9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6728404BF500290EBE /* SceneDelegate.swift */; };
 		9A8CDD6A28404BF500290EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6928404BF500290EBE /* ViewController.swift */; };
@@ -28,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A03ACE5286EA5FB00E3DB2D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9A03ACE8286EA65200E3DB2D /* YuuRitzyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YuuRitzyModel.xcdatamodel; sourceTree = "<group>"; };
+		9A03ACEA286ECCC700E3DB2D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		9A8CDD6228404BF500290EBE /* AppFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8CDD6528404BF500290EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A8CDD6728404BF500290EBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,17 +61,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABD5A8F2869506F004B2D54 /* Cosmos in Frameworks */,
+				9A03ACE6286EA5FB00E3DB2D /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A03ACE4286EA5FB00E3DB2D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A03ACE5286EA5FB00E3DB2D /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9A8CDD5928404BF500290EBE = {
 			isa = PBXGroup;
 			children = (
 				9A8CDD6428404BF500290EBE /* AppFinal */,
 				9A8CDD6328404BF500290EBE /* Products */,
+				9A03ACE4286EA5FB00E3DB2D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,6 +110,8 @@
 				9A8CDD6E28404BF800290EBE /* Assets.xcassets */,
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
 				9A8CDD7328404BF800290EBE /* Info.plist */,
+				9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */,
+				9A03ACEA286ECCC700E3DB2D /* CoreData.swift */,
 			);
 			path = AppFinal;
 			sourceTree = "<group>";
@@ -200,9 +218,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A03ACE9286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld in Sources */,
 				9A9DE4B72841EE900008BF75 /* SecondViewController.swift in Sources */,
 				9A8CDD6A28404BF500290EBE /* ViewController.swift in Sources */,
 				9ABDFAB02840B0D1004BD884 /* UserViewController.swift in Sources */,
+				9A03ACEB286ECCC800E3DB2D /* CoreData.swift in Sources */,
 				9A8CDD6628404BF500290EBE /* AppDelegate.swift in Sources */,
 				9A9DE4B52841DCF00008BF75 /* CollectionViewCell.swift in Sources */,
 				9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */,
@@ -449,6 +469,19 @@
 			productName = Cosmos;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9A03ACE8286EA65200E3DB2D /* YuuRitzyModel.xcdatamodel */,
+			);
+			currentVersion = 9A03ACE8286EA65200E3DB2D /* YuuRitzyModel.xcdatamodel */;
+			path = YuuRitzyModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 9A8CDD5A28404BF500290EBE /* Project object */;
 }

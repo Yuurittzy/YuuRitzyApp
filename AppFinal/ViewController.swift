@@ -14,7 +14,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var collectionV: UICollectionView!
     
     let datos = DataSet()
-    var ay: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +38,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         self.performSegue(withIdentifier: "segue", sender: nil)
-        ay = indexPath.row
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
