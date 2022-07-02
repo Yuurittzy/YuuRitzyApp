@@ -79,8 +79,11 @@ class Persist {
            var resultset = [Favoritos]()
            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Favoritos")
            do {
+               print("se hizo el request")
                let tmp = try managedObjectContext!.fetch(request)
                resultset = tmp as! [Favoritos]
+               print("____________")
+               print(resultset)
            }
            catch {
                print ("fallo el request \(error.localizedDescription)")

@@ -28,6 +28,7 @@
 		9ABD5A8F2869506F004B2D54 /* Cosmos in Frameworks */ = {isa = PBXBuildFile; productRef = 9ABD5A8E2869506F004B2D54 /* Cosmos */; };
 		9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDFAAD2840AF33004BD884 /* CartViewController.swift */; };
 		9ABDFAB02840B0D1004BD884 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */; };
+		9AEDB0A6286FF3BC006A100D /* CollectionViewCellFav.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDB0A5286FF3BC006A100D /* CollectionViewCellFav.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,7 @@
 		9ABD5A8928690D46004B2D54 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		9ABDFAAD2840AF33004BD884 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		9ABDFAAF2840B0D1004BD884 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		9AEDB0A5286FF3BC006A100D /* CollectionViewCellFav.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellFav.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +108,13 @@
 				9A9DE4B42841DCF00008BF75 /* CollectionViewCell.swift */,
 				9A9DE4B62841EE900008BF75 /* SecondViewController.swift */,
 				9ABD5A8928690D46004B2D54 /* DataModel.swift */,
+				9A03ACEA286ECCC700E3DB2D /* CoreData.swift */,
+				9AEDB0A5286FF3BC006A100D /* CollectionViewCellFav.swift */,
 				9A8CDD6B28404BF500290EBE /* Main.storyboard */,
 				9A8CDD6E28404BF800290EBE /* Assets.xcassets */,
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
 				9A8CDD7328404BF800290EBE /* Info.plist */,
 				9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */,
-				9A03ACEA286ECCC700E3DB2D /* CoreData.swift */,
 			);
 			path = AppFinal;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			files = (
 				9A03ACE9286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld in Sources */,
 				9A9DE4B72841EE900008BF75 /* SecondViewController.swift in Sources */,
+				9AEDB0A6286FF3BC006A100D /* CollectionViewCellFav.swift in Sources */,
 				9A8CDD6A28404BF500290EBE /* ViewController.swift in Sources */,
 				9ABDFAB02840B0D1004BD884 /* UserViewController.swift in Sources */,
 				9A03ACEB286ECCC800E3DB2D /* CoreData.swift in Sources */,

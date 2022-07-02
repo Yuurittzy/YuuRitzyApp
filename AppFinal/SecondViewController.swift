@@ -50,7 +50,7 @@ class SecondViewController: UIViewController {
             icFav.image = UIImage(systemName:"suit.heart")
         }else{
             let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
-            persist.guardaEnFav(personaje!.name.capitalized, personaje!.stars, precioFinal)
+            persist.guardaEnFav(personaje!.name, personaje!.stars, precioFinal)
             icFav.image = UIImage(systemName:"suit.heart.fill")
         }
         
