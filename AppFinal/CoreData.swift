@@ -45,6 +45,7 @@ class Persist {
             }
             else{ */
                 // Si es iOS 9 o anterior, se deben instanciar los objetos NSManagedObjectModel y NSPersistentStoreCoordinator
+            
                 let persistence = self.persistentStore
                 if persistence == nil {
                     return nil
@@ -64,13 +65,14 @@ class Persist {
                unFav.calificacion = calificacion
                unFav.precioFinal = Int16(precio)
                // guardamos el objeto
-               do {
-                   print("se guardo la infooooo segun xdxd")
-                   try managedObjectContext?.save()
-               }
-               catch {
-                   print ("No se puede guardar a la BD \(error.localizedDescription)")
-               }
+                   do {
+                       print("se guardo la infooooo segun xdxd")
+                       try managedObjectContext?.save()
+                   }
+                   catch {
+                       print ("No se puede guardar a la BD \(error.localizedDescription)")
+                   }
+               
            }
        }
     

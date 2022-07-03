@@ -10,6 +10,8 @@ import Cosmos
 
 class SecondViewController: UIViewController {
     
+    let persist = Persist()
+    
     @IBOutlet weak var titleCajaDe: UILabel!
     @IBOutlet weak var starsRating: CosmosView!
     @IBOutlet weak var cajaPreview: UIImageView!
@@ -25,7 +27,7 @@ class SecondViewController: UIViewController {
     }
     
     var personaje : Personaje?
-    var persist = Persist()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,19 +38,21 @@ class SecondViewController: UIViewController {
         precioViejo.text = "$ " + String(personaje!.price)
         precioNuevo.text = "$ " + String(personaje!.price - personaje!.price * personaje!.discount/100)
         descuentoPorcentaje.text = String(personaje!.discount) + "% OFF"
-        
         // AL HACER TAP EN EL ICONO DE FAV SE CREAN LAS VARIABLES PARA FORMAR LA ACCION
         let tap = UITapGestureRecognizer(target: self, action: #selector(SecondViewController.tappedMe))
         icFav.addGestureRecognizer(tap)
         icFav.isUserInteractionEnabled = true
+        
     }
     
     
     @objc func tappedMe()
     {
+        
         if (icFav.image == UIImage(systemName:"suit.heart.fill")){
             icFav.image = UIImage(systemName:"suit.heart")
         }else{
+            
             let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
             persist.guardaEnFav(personaje!.name, personaje!.stars, precioFinal)
             icFav.image = UIImage(systemName:"suit.heart.fill")
