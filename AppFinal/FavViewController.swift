@@ -11,6 +11,7 @@ import UIKit
 class FavViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
   
     
+    @IBOutlet weak var direction: UILabel!
     @IBOutlet weak var collectionVieww: UICollectionView!
     var persist: [Favoritos] = []
     
@@ -18,12 +19,22 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Favoritos"
-
+        let tap = UITapGestureRecognizer(target: self, action: #selector(SecondViewController.tappedMe))
+        direction.addGestureRecognizer(tap)
+        direction.isUserInteractionEnabled = true
     }
-
+    @objc func tappedMe()
+    {
+        //persist.removeAll()
+        print("!!se supone se elimono!!")
+      //  print(persist)
+        //collectionVieww.reloadData()
+    }
     override func viewWillAppear(_ animated: Bool) {
-        collectionVieww.reloadData()
         persist = Persist().obtenerFav()
+        collectionVieww.reloadData()
+        print("LO QUE LLEGA AL WILL")
+        print(persist)
             
     }
         
@@ -36,7 +47,8 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFav", for: indexPath)
             as! CollectionViewCellFav
-        
+        persist = Persist().obtenerFav()
+        print(persist)
         let persists = persist[indexPath.row]
         if (persists.nombre != nil){
             
@@ -46,6 +58,7 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
             cell.stars.rating = persists.calificacion
             return cell
         }
+        
        return cell
         
          

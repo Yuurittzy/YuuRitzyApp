@@ -56,33 +56,34 @@ class Persist {
             return moc
         }()
     
-    func guardaEnFav(_ nombre:String, _ calificacion: Double, _ precio: Int) {
+    func guardaEnFav(_ nombre: String!, _ calificacion: Double, _ precio: Int) {
            // creamos un nuevo objeto de tipo "Log"
-           if let entidad = NSEntityDescription.entity(forEntityName:"Favoritos", in:managedObjectContext!) {
-               let unFav = NSManagedObject(entity: entidad, insertInto: managedObjectContext!) as! Favoritos
+           
+            if let entidad = NSEntityDescription.entity(forEntityName:"Favoritos", in:self.managedObjectContext!) {
+                let unFav = NSManagedObject(entity: entidad, insertInto: self.managedObjectContext!) as! Favoritos
                // asignamos sus propiedades
-               unFav.nombre = nombre
+               unFav.nombre = String(nombre)
                unFav.calificacion = calificacion
                unFav.precioFinal = Int16(precio)
                // guardamos el objeto
                    do {
+                       try self.managedObjectContext?.save()
                        print("se guardo la infooooo segun xdxd")
-                       try managedObjectContext?.save()
                    }
                    catch {
                        print ("No se puede guardar a la BD \(error.localizedDescription)")
                    }
-               
+           
            }
        }
     
     func obtenerFav() -> [Favoritos] {
-           // SELECT * FROM Log
-           var resultset = [Favoritos]()
+        
+            var resultset = [Favoritos]()
            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Favoritos")
            do {
                print("se hizo el request")
-               let tmp = try managedObjectContext!.fetch(request)
+               let tmp = try self.managedObjectContext!.fetch(request)
                resultset = tmp as! [Favoritos]
                print("____________")
                print(resultset)
@@ -90,8 +91,9 @@ class Persist {
            catch {
                print ("fallo el request \(error.localizedDescription)")
            }
-           return resultset
+            return resultset
        }
+    
     
 }
 
