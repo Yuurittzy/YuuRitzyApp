@@ -11,6 +11,7 @@ import Cosmos
 class SecondViewController: UIViewController {
     
     let persist = Persist()
+    var items: [Favoritos] = []
     
     @IBOutlet weak var titleCajaDe: UILabel!
     @IBOutlet weak var starsRating: CosmosView!
@@ -32,43 +33,55 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title="Yuu Ritzy"
+
+        let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "$ " + String(personaje!.price))
+            attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
+        
         starsRating.rating = personaje!.stars
         titleCajaDe.text = "Caja sorpresa con \n temática de " + personaje!.name.capitalized
         cajaPreview.image = UIImage(named:  personaje!.name + "Preview")
-        precioViejo.text = "$ " + String(personaje!.price)
+        precioViejo.attributedText = attributeString
         precioNuevo.text = "$ " + String(personaje!.price - personaje!.price * personaje!.discount/100)
         descuentoPorcentaje.text = String(personaje!.discount) + "% OFF"
+        
+        
         // AL HACER TAP EN EL ICONO DE FAV SE CREAN LAS VARIABLES PARA FORMAR LA ACCION
         let tap = UITapGestureRecognizer(target: self, action: #selector(SecondViewController.tappedMe))
         icFav.addGestureRecognizer(tap)
         icFav.isUserInteractionEnabled = true
-        
-    }
-    
-    
-    @objc func tappedMe()
-    {
-        
-        if (icFav.image == UIImage(systemName:"suit.heart.fill")){
+        items = persist.obtenerFav()
+        if yaestaguardado() {
             icFav.image = UIImage(systemName:"suit.heart")
-        }else{
-            
-            let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
-            persist.guardaEnFav(personaje!.name, personaje!.stars, precioFinal)
-            icFav.image = UIImage(systemName:"suit.heart.fill")
-        }
+        }else { icFav.image = UIImage(systemName:"suit.heart.fill")}
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func tappedMe(){
+        if (icFav.image == UIImage(systemName:"suit.heart")){
+            icFav.image = UIImage(systemName:"suit.heart.fill")
+            let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
+            if (yaestaguardado() || items.count == 0){
+                persist.guardaEnFav(personaje!.name, personaje!.stars, precioFinal)
+            } else if (yaestaguardado() && icFav.image == UIImage(systemName:"suit.heart.fill")) {
+           //     icFav.image = UIImage(systemName:"suit.heart")
+               print("corazon lleno y guardado")
+            }
+        }
+            
     }
-    */
-
+    
+    func yaestaguardado() -> Bool {
+        for item in items {
+            print ("entro al for")
+            if(item.nombre! == personaje!.name){
+                print ("ya esta guardado")
+               return false
+            }
+        }
+        print ("no esta guardado")
+        return true
+    }
+    
 }
+    

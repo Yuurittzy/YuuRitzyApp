@@ -226,7 +226,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="10% OFF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vkA-t5-dim">
-                                                <rect key="frame" x="135" y="429" width="70.5" height="23"/>
+                                                <rect key="frame" x="140" y="429" width="70.5" height="23"/>
                                                 <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="18"/>
                                                 <color key="textColor" name="Purple2"/>
                                                 <nil key="highlightedColor"/>
@@ -302,11 +302,11 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="VCM-nw-I1p" secondAttribute="trailing" id="2bb-gd-gpC"/>
-                                            <constraint firstItem="vkA-t5-dim" firstAttribute="top" secondItem="Y1A-7y-Q9v" secondAttribute="bottom" constant="10" id="59g-iM-R9c"/>
+                                            <constraint firstItem="vkA-t5-dim" firstAttribute="top" secondItem="Y1A-7y-Q9v" secondAttribute="bottom" constant="15" id="59g-iM-R9c"/>
                                             <constraint firstItem="je8-3t-LcY" firstAttribute="top" secondItem="Vc9-2W-ffR" secondAttribute="bottom" constant="10" id="5un-6C-m1M"/>
                                             <constraint firstAttribute="trailing" secondItem="je8-3t-LcY" secondAttribute="trailing" constant="15" id="79c-9s-lM3"/>
                                             <constraint firstItem="he1-c0-KMW" firstAttribute="leading" secondItem="IIb-Yz-b7P" secondAttribute="leading" constant="40" id="7dz-iW-5Dk"/>
-                                            <constraint firstItem="vkA-t5-dim" firstAttribute="leading" secondItem="yMf-Ty-nS4" secondAttribute="trailing" constant="15" id="A2a-RZ-DFF"/>
+                                            <constraint firstItem="vkA-t5-dim" firstAttribute="leading" secondItem="yMf-Ty-nS4" secondAttribute="trailing" constant="20" id="A2a-RZ-DFF"/>
                                             <constraint firstItem="SMH-5p-2Ez" firstAttribute="top" secondItem="he1-c0-KMW" secondAttribute="bottom" constant="20" id="BDd-Dh-Lqe"/>
                                             <constraint firstItem="UbW-xg-ZWw" firstAttribute="top" secondItem="SMH-5p-2Ez" secondAttribute="bottom" constant="20" id="BJx-8v-iLV"/>
                                             <constraint firstItem="he1-c0-KMW" firstAttribute="top" secondItem="hmu-BL-Wwu" secondAttribute="bottom" constant="20" id="CEL-Ym-Xjn"/>
