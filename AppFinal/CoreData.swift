@@ -95,5 +95,19 @@ class Persist {
        }
     
     
+    func borrar(_ indice : Int){
+            self.managedObjectContext?.delete(self.obtenerFav()[indice])
+            print("se borro la infooooo segun xdxd")
+        do {
+           try self.managedObjectContext?.save()
+            print("se borro la infooooo segun xdxd")}
+        catch{
+            print("F")
+        }
+    }
+    
+    
+    
+    
 }
 

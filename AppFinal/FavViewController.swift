@@ -25,21 +25,15 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     @objc func tappedMe()
     {
-        //persist.removeAll()
-        print("!!se supone se elimono!!")
-      //  print(persist)
-        //collectionVieww.reloadData()
     }
     override func viewWillAppear(_ animated: Bool) {
         persist = Persist().obtenerFav()
         collectionVieww.reloadData()
-        print("LO QUE LLEGA AL WILL")
-        print(persist)
+       
             
     }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(persist.count)
         return persist.count
         
     }
@@ -48,7 +42,6 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellFav", for: indexPath)
             as! CollectionViewCellFav
         persist = Persist().obtenerFav()
-        print(persist)
         let persists = persist[indexPath.row]
         if (persists.nombre != nil){
             
