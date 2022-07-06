@@ -7,14 +7,40 @@
 
 import UIKit
 
-class CartViewController: UIViewController {
-
+class CartViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    @IBAction func clickMinus(_ sender: Any) {
+    }
+    @IBAction func clickPlus(_ sender: Any) {
+    }
+    @IBOutlet weak var quantity: UILabel!
+    
+    @IBAction func comprar(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet weak var adress: UILabel!
+    @IBOutlet weak var total: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Carrito"
         // Do any additional setup after loading the view.
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellCart", for: indexPath)
+            as! CollectionViewCellCart
+        cell.boxOf.text = "Caja sorpresa con temática de tangananica"
+        return cell
+    }
+    
+
 
     /*
     // MARK: - Navigation

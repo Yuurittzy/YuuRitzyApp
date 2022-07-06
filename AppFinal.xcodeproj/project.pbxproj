@@ -10,6 +10,7 @@
 		9A03ACE6286EA5FB00E3DB2D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A03ACE5286EA5FB00E3DB2D /* CoreData.framework */; };
 		9A03ACE9286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */; };
 		9A03ACEB286ECCC800E3DB2D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A03ACEA286ECCC700E3DB2D /* CoreData.swift */; };
+		9A5656D5287557DE009D9BE1 /* CollectionViewCellCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5656D4287557DE009D9BE1 /* CollectionViewCellCart.swift */; };
 		9A8CDD6628404BF500290EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6528404BF500290EBE /* AppDelegate.swift */; };
 		9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6728404BF500290EBE /* SceneDelegate.swift */; };
 		9A8CDD6A28404BF500290EBE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6928404BF500290EBE /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 		9A03ACE5286EA5FB00E3DB2D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9A03ACE8286EA65200E3DB2D /* YuuRitzyModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = YuuRitzyModel.xcdatamodel; sourceTree = "<group>"; };
 		9A03ACEA286ECCC700E3DB2D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
+		9A5656D4287557DE009D9BE1 /* CollectionViewCellCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCart.swift; sourceTree = "<group>"; };
 		9A8CDD6228404BF500290EBE /* AppFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8CDD6528404BF500290EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A8CDD6728404BF500290EBE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				9ABD5A8928690D46004B2D54 /* DataModel.swift */,
 				9A03ACEA286ECCC700E3DB2D /* CoreData.swift */,
 				9AEDB0A5286FF3BC006A100D /* CollectionViewCellFav.swift */,
+				9A5656D4287557DE009D9BE1 /* CollectionViewCellCart.swift */,
 				9A8CDD6B28404BF500290EBE /* Main.storyboard */,
 				9A8CDD6E28404BF800290EBE /* Assets.xcassets */,
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
@@ -232,6 +235,7 @@
 				9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */,
 				9A8CDD882840AACF00290EBE /* FavViewController.swift in Sources */,
 				9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */,
+				9A5656D5287557DE009D9BE1 /* CollectionViewCellCart.swift in Sources */,
 				9ABD5A8A28690D46004B2D54 /* DataModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
