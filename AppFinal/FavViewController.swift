@@ -25,6 +25,7 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     @objc func tappedMe()
     {
+    
     }
     override func viewWillAppear(_ animated: Bool) {
         persist = Persist().obtenerFav()
@@ -57,6 +58,8 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
          
         
     }
+    
+    
     
     
 

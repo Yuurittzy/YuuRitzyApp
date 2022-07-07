@@ -97,7 +97,7 @@ class Persist {
     
     func borrar(_ indice : Int){
             self.managedObjectContext?.delete(self.obtenerFav()[indice])
-            print("se borro la infooooo segun xdxd")
+            print("se borro la infooooo segun fav xdxd")
         do {
            try self.managedObjectContext?.save()
             print("se borro la infooooo segun xdxd")}
@@ -106,6 +106,53 @@ class Persist {
         }
     }
     
+    func guardaEnCart(_ nombre: String!, _ precioFinal: Int, _ cantidad: Int) {
+           // creamos un nuevo objeto de tipo "Log"
+            if let entidad = NSEntityDescription.entity(forEntityName:"Carrito", in:self.managedObjectContext!) {
+                let addCart = NSManagedObject(entity: entidad, insertInto: self.managedObjectContext!) as! Carrito
+               // asignamos sus propiedades
+               addCart.nombre = String(nombre)
+               addCart.preciofinal = Int16(precioFinal)
+                addCart.cantidad =  Int16(cantidad)
+               // guardamos el objeto
+                   do {
+                       try self.managedObjectContext?.save()
+                       print("se guardo la infooooo segun en carrito xdxd")
+                   }
+                   catch {
+                       print ("No se puede guardar a la BD \(error.localizedDescription)")
+                   }
+           
+           }
+       }
+    
+    func obtenerCart() -> [Carrito] {
+        
+            var resultset = [Carrito]()
+           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Carrito")
+           do {
+               print("se hizo el request")
+               let tmp = try self.managedObjectContext!.fetch(request)
+               resultset = tmp as! [Carrito]
+               print("____________")
+               print(resultset)
+           }
+           catch {
+               print ("fallo el request \(error.localizedDescription)")
+           }
+            return resultset
+       }
+    
+    func borrarCart(_ indice : Int){
+            self.managedObjectContext?.delete(self.obtenerCart()[indice])
+            print("se borro la infooooo segun fav xdxd")
+        do {
+           try self.managedObjectContext?.save()
+            print("se borro la infooooo segun xdxd")}
+        catch{
+            print("F")
+        }
+    }
     
     
     

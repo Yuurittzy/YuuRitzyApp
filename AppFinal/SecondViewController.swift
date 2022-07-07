@@ -10,6 +10,10 @@ import Cosmos
 
 class SecondViewController: UIViewController {
     
+    var personaje : Personaje?
+    let persist = Persist()
+    var items: [Favoritos] = []
+    var itemsCart: [Carrito] = []
     
     @IBOutlet weak var titleCajaDe: UILabel!
     @IBOutlet weak var starsRating: CosmosView!
@@ -22,12 +26,15 @@ class SecondViewController: UIViewController {
     
     @IBAction func clickAgregarAlCarrito(_ sender: Any) {
         print("se agrego al carrito")
+        if (noEstaGuardadoEnCarrito() == -1 || items.count == 0){
+            let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
+            persist.guardaEnCart(personaje!.name, precioFinal, 1)
+            print("c guardo en carrito")
+        }
     
     }
     
-    var personaje : Personaje?
-    let persist = Persist()
-    var items: [Favoritos] = []
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +58,7 @@ class SecondViewController: UIViewController {
         icFav.addGestureRecognizer(tap)
         icFav.isUserInteractionEnabled = true
         items = persist.obtenerFav()
+        itemsCart = persist.obtenerCart()
         if (noestaguardado() == -1){
             icFav.image = UIImage(systemName:"suit.heart")
         }else { icFav.image = UIImage(systemName:"suit.heart.fill")}
@@ -85,6 +93,16 @@ class SecondViewController: UIViewController {
         }
         return -1
     }
+    
+    func noEstaGuardadoEnCarrito() -> Int {
+        for item in itemsCart {
+            if(item.nombre! == personaje!.name){
+                return itemsCart.firstIndex(of: item)!
+            }
+        }
+        return -1
+    }
+    
     
 }
     
