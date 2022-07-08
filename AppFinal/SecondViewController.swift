@@ -26,7 +26,7 @@ class SecondViewController: UIViewController {
     
     @IBAction func clickAgregarAlCarrito(_ sender: Any) {
         print("se agrego al carrito")
-        if (noEstaGuardadoEnCarrito() == -1 || items.count == 0){
+        if (noEstaGuardadoEnCarrito() == -1 || itemsCart.count == 0){
             let precioFinal = personaje!.price - personaje!.price * personaje!.discount/100
             persist.guardaEnCart(personaje!.name, precioFinal, 1)
             print("c guardo en carrito")
@@ -78,7 +78,6 @@ class SecondViewController: UIViewController {
             icFav.image = UIImage(systemName:"suit.heart")
             if (noestaguardado() != -1) {
                 persist.borrar(noestaguardado())
-                //items.remove(at: noestaguardado())
                print("corazon lleno y guardado")
             }
         }

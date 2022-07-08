@@ -427,7 +427,7 @@
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BFF-a1-jsD">
-                                <rect key="frame" x="0.0" y="138" width="414" height="758"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="SdY-Rt-Zd7">
                                     <size key="itemSize" width="414" height="210"/>
@@ -554,7 +554,7 @@
                             <constraint firstItem="BFF-a1-jsD" firstAttribute="leading" secondItem="9yr-Rt-dx5" secondAttribute="leading" id="GfK-ro-K0B"/>
                             <constraint firstItem="M0c-rb-pVF" firstAttribute="leading" secondItem="pyx-SM-CAJ" secondAttribute="trailing" id="ULr-L4-mvp"/>
                             <constraint firstItem="M0c-rb-pVF" firstAttribute="top" secondItem="feQ-zZ-KIp" secondAttribute="top" id="ncU-l7-PvN"/>
-                            <constraint firstItem="BFF-a1-jsD" firstAttribute="top" secondItem="M0c-rb-pVF" secondAttribute="bottom" constant="10" id="t5Y-k4-SQ8" userLabel="Collection View.top = ¿Compras desde Ciudad de México...08400?.bottom "/>
+                            <constraint firstItem="BFF-a1-jsD" firstAttribute="top" secondItem="M0c-rb-pVF" secondAttribute="bottom" id="t5Y-k4-SQ8" userLabel="Collection View.top = ¿Compras desde Ciudad de México...08400?.bottom "/>
                             <constraint firstAttribute="trailing" secondItem="BFF-a1-jsD" secondAttribute="trailing" id="tUl-ZX-Lgf"/>
                             <constraint firstItem="pyx-SM-CAJ" firstAttribute="leading" secondItem="feQ-zZ-KIp" secondAttribute="leading" id="zDV-gR-UqF"/>
                         </constraints>
@@ -578,7 +578,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde Ciudad de México...08400?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Ds-WXz">
-                                <rect key="frame" x="40" y="88" width="322" height="40"/>
+                                <rect key="frame" x="40" y="88" width="374" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xXX-Uk-6Xm"/>
@@ -597,14 +597,14 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1ua-ZU-dpn">
-                                <rect key="frame" x="0.0" y="158.5" width="362" height="169"/>
+                                <rect key="frame" x="0.0" y="158.5" width="414" height="169"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="AXi-Dy-vdQ"/>
                                     <constraint firstAttribute="width" constant="170" id="vtt-wB-0Pa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, Juanito!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-PA-XKa" userLabel="Hola">
-                                <rect key="frame" x="0.0" y="343" width="362" height="35"/>
+                                <rect key="frame" x="0.0" y="343" width="414" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -980,6 +980,8 @@
                     <navigationItem key="navigationItem" id="pxD-rh-tGI"/>
                     <connections>
                         <outlet property="adress" destination="0Ja-4q-Uxq" id="Z6l-sO-E6d"/>
+                        <outlet property="btnComprar" destination="LHK-UC-GfE" id="r58-aB-NwS"/>
+                        <outlet property="ceroCero" destination="xCO-Ba-Pjh" id="f8y-wt-Y5x"/>
                         <outlet property="collectionVieww" destination="UgY-ao-7UJ" id="BNH-ZF-sFR"/>
                         <outlet property="total" destination="Uhc-e6-Wcu" id="5Ld-Fb-YRh"/>
                     </connections>

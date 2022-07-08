@@ -134,8 +134,8 @@ class Persist {
                print("se hizo el request")
                let tmp = try self.managedObjectContext!.fetch(request)
                resultset = tmp as! [Carrito]
-               print("____________")
-               print(resultset)
+               //print("____________")
+             //  print(resultset)
            }
            catch {
                print ("fallo el request \(error.localizedDescription)")
@@ -145,10 +145,10 @@ class Persist {
     
     func borrarCart(_ indice : Int){
             self.managedObjectContext?.delete(self.obtenerCart()[indice])
-            print("se borro la infooooo segun fav xdxd")
+            print("se borro la infooooo segun cart xdxd")
         do {
            try self.managedObjectContext?.save()
-            print("se borro la infooooo segun xdxd")}
+            print("se guardo ya borrada de cart xdxd")}
         catch{
             print("F")
         }

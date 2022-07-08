@@ -44,6 +44,7 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
             as! CollectionViewCellFav
         persist = Persist().obtenerFav()
         let persists = persist[indexPath.row]
+        
         if (persists.nombre != nil){
             
             cell.ivCaja.image = UIImage(named: persists.nombre!.lowercased())
