@@ -15,7 +15,8 @@ class CollectionViewCellFav: UICollectionViewCell {
     @IBOutlet weak var stars: CosmosView!
     @IBOutlet weak var addToCart: UIButton!
     @IBOutlet weak var price: UILabel!
-    @IBOutlet weak var icFav: UIImageView!
+    @IBOutlet weak var btnfav: UIButton!
+    
     
     
 }

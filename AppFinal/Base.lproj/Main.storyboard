@@ -150,6 +150,7 @@
                     <navigationItem key="navigationItem" id="AL6-29-U0H"/>
                     <connections>
                         <outlet property="collectionV" destination="HBl-sA-DeQ" id="36h-Kg-0YZ"/>
+                        <outlet property="lblLocation" destination="ctz-gd-4WO" id="zaF-UY-xaS"/>
                         <segue destination="avy-BJ-tDE" kind="show" identifier="segue" id="PEK-Gj-wmX"/>
                     </connections>
                 </viewController>
@@ -493,14 +494,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Q1t-cP-ZLV" userLabel="icFav">
-                                                    <rect key="frame" x="374" y="11.5" width="30" height="27.5"/>
-                                                    <color key="tintColor" name="Orange"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="30" id="R0i-E0-5vC"/>
-                                                        <constraint firstAttribute="height" constant="30" id="a5T-51-Vq2"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-Fj-2Rx" userLabel="addToCart">
                                                     <rect key="frame" x="180" y="146" width="136" height="31"/>
                                                     <state key="normal" title="Button"/>
@@ -508,21 +501,33 @@
                                                         <color key="baseBackgroundColor" name="Pink"/>
                                                     </buttonConfiguration>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fmL-i3-2CX" userLabel="btnFav">
+                                                    <rect key="frame" x="374" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="YXI-Xe-v8w"/>
+                                                        <constraint firstAttribute="width" constant="30" id="mMS-lo-nxZ"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="Orange"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system">
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large"/>
+                                                    </buttonConfiguration>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="Etb-ac-Smo" firstAttribute="top" secondItem="RqJ-w2-ETi" secondAttribute="top" constant="30" id="4ib-8m-7TN"/>
+                                                <constraint firstAttribute="trailing" secondItem="fmL-i3-2CX" secondAttribute="trailing" constant="10" id="7R2-b9-yp4"/>
                                                 <constraint firstItem="Etb-ac-Smo" firstAttribute="leading" secondItem="IHs-7e-B1z" secondAttribute="trailing" constant="10" id="F06-Vm-vQA"/>
                                                 <constraint firstItem="Q0l-yR-UGN" firstAttribute="top" secondItem="OJL-EX-8Ts" secondAttribute="bottom" constant="10" id="Nmm-ee-uez"/>
                                                 <constraint firstItem="OJL-EX-8Ts" firstAttribute="top" secondItem="Etb-ac-Smo" secondAttribute="bottom" constant="4" id="SRy-St-ovP"/>
                                                 <constraint firstItem="Q0l-yR-UGN" firstAttribute="leading" secondItem="IHs-7e-B1z" secondAttribute="trailing" constant="10" id="SkR-S3-Vj5"/>
-                                                <constraint firstItem="Q1t-cP-ZLV" firstAttribute="leading" secondItem="Etb-ac-Smo" secondAttribute="trailing" constant="10" id="W4K-7M-GFp"/>
+                                                <constraint firstItem="fmL-i3-2CX" firstAttribute="leading" secondItem="Etb-ac-Smo" secondAttribute="trailing" constant="10" id="ZM5-0i-Eqf"/>
                                                 <constraint firstItem="IHs-7e-B1z" firstAttribute="leading" secondItem="RqJ-w2-ETi" secondAttribute="leading" constant="20" id="dwC-pp-wQq"/>
                                                 <constraint firstItem="9q7-Fj-2Rx" firstAttribute="top" secondItem="Q0l-yR-UGN" secondAttribute="bottom" constant="10" id="ewS-CP-IUm"/>
+                                                <constraint firstItem="fmL-i3-2CX" firstAttribute="top" secondItem="RqJ-w2-ETi" secondAttribute="top" constant="10" id="gAJ-oy-HSd"/>
                                                 <constraint firstItem="OJL-EX-8Ts" firstAttribute="leading" secondItem="IHs-7e-B1z" secondAttribute="trailing" constant="10" id="geJ-Bz-brM"/>
                                                 <constraint firstItem="IHs-7e-B1z" firstAttribute="top" secondItem="RqJ-w2-ETi" secondAttribute="top" constant="30" id="hTf-GY-v47"/>
-                                                <constraint firstItem="Q1t-cP-ZLV" firstAttribute="top" secondItem="RqJ-w2-ETi" secondAttribute="top" constant="10" id="lK4-Ss-Mpr"/>
                                                 <constraint firstAttribute="bottom" secondItem="IHs-7e-B1z" secondAttribute="bottom" constant="30" id="otZ-CS-Nrf"/>
-                                                <constraint firstAttribute="trailing" secondItem="Q1t-cP-ZLV" secondAttribute="trailing" constant="10" id="pck-uN-caT"/>
                                                 <constraint firstItem="9q7-Fj-2Rx" firstAttribute="leading" secondItem="IHs-7e-B1z" secondAttribute="trailing" constant="10" id="wgm-pU-9Ew"/>
                                             </constraints>
                                         </collectionViewCellContentView>
@@ -531,7 +536,7 @@
                                         <connections>
                                             <outlet property="addToCart" destination="9q7-Fj-2Rx" id="cPA-4Z-xND"/>
                                             <outlet property="boxOf" destination="Etb-ac-Smo" id="ZCX-UX-LmW"/>
-                                            <outlet property="icFav" destination="Q1t-cP-ZLV" id="gYj-fB-U1A"/>
+                                            <outlet property="btnfav" destination="fmL-i3-2CX" id="hhJ-SG-lu3"/>
                                             <outlet property="ivCaja" destination="IHs-7e-B1z" id="LoZ-EU-K4A"/>
                                             <outlet property="price" destination="Q0l-yR-UGN" id="VIA-4L-t3y"/>
                                             <outlet property="stars" destination="OJL-EX-8Ts" id="SFC-ZL-x3o"/>
@@ -578,7 +583,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde Ciudad de México...08400?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Ds-WXz">
-                                <rect key="frame" x="40" y="88" width="374" height="40"/>
+                                <rect key="frame" x="40" y="88" width="322" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xXX-Uk-6Xm"/>
@@ -597,14 +602,14 @@
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1ua-ZU-dpn">
-                                <rect key="frame" x="0.0" y="158.5" width="414" height="169"/>
+                                <rect key="frame" x="0.0" y="158.5" width="362" height="169"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="170" id="AXi-Dy-vdQ"/>
                                     <constraint firstAttribute="width" constant="170" id="vtt-wB-0Pa"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, Juanito!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-PA-XKa" userLabel="Hola">
-                                <rect key="frame" x="0.0" y="343" width="414" height="35"/>
+                                <rect key="frame" x="0.0" y="343" width="362" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1152,7 +1157,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yRI-zu-rJe"/>
+        <segue reference="os8-7V-dlH"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="419" height="241"/>
