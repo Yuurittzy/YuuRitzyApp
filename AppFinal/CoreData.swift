@@ -39,12 +39,6 @@ class Persist {
         
         lazy var managedObjectContext:NSManagedObjectContext? = {
             var moc: NSManagedObjectContext?
-            /*if #available(iOS 10.0, *){
-                // Si es iOS 10 o posterior, los objetos NSManagedObjectModel y NSPersistentStoreCoordinator no son instanciados. En su lugar se instancia el objeto NSPersistentContainer que tiene un NSManagedObjectContext integrado, en su propiedad viewContext
-                moc = self.persistentContainer.viewContext
-            }
-            else{ */
-                // Si es iOS 9 o anterior, se deben instanciar los objetos NSManagedObjectModel y NSPersistentStoreCoordinator
             
                 let persistence = self.persistentStore
                 if persistence == nil {
@@ -55,6 +49,40 @@ class Persist {
             //}
             return moc
         }()
+    
+    func guardaDireccion(_ calle: String!, _ numCasa: String, _ colonia: String, _ cp: String, _ delegacion: String!) {
+            if let entidad = NSEntityDescription.entity(forEntityName:"Direccion", in:self.managedObjectContext!) {
+                let unDir = NSManagedObject(entity: entidad, insertInto: self.managedObjectContext!) as! Direccion
+                unDir.calle = calle
+                unDir.numCalle = numCasa
+                unDir.colonia = colonia
+                unDir.cp = cp
+                unDir.delegacion = delegacion
+                   do {
+                       try self.managedObjectContext?.save()
+                       print("se guardo la infooooo en dir")
+                   }
+                   catch {
+                       print ("No se puede guardar a la BD \(error.localizedDescription)")
+                   }
+           
+           }
+       }
+    
+    func obtenerDireccion() -> [Direccion] {
+            var resultset = [Direccion]()
+           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Direccion")
+           do {
+               let tmp = try self.managedObjectContext!.fetch(request)
+               resultset = tmp as! [Direccion]
+               print("____________")
+               print(resultset)
+           }
+           catch {
+               print ("fallo el request \(error.localizedDescription)")
+           }
+            return resultset
+       }
     
     func guardaEnFav(_ nombre: String!, _ calificacion: Double, _ precio: Int) {
            // creamos un nuevo objeto de tipo "Log"
@@ -68,7 +96,6 @@ class Persist {
                // guardamos el objeto
                    do {
                        try self.managedObjectContext?.save()
-                       print("se guardo la infooooo segun xdxd")
                    }
                    catch {
                        print ("No se puede guardar a la BD \(error.localizedDescription)")
@@ -82,11 +109,8 @@ class Persist {
             var resultset = [Favoritos]()
            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Favoritos")
            do {
-               print("se hizo el request")
                let tmp = try self.managedObjectContext!.fetch(request)
                resultset = tmp as! [Favoritos]
-               print("____________")
-               print(resultset)
            }
            catch {
                print ("fallo el request \(error.localizedDescription)")
@@ -100,7 +124,7 @@ class Persist {
             print("se borro la infooooo segun fav xdxd")
         do {
            try self.managedObjectContext?.save()
-            print("se borro la infooooo segun xdxd")}
+        }
         catch{
             print("F")
         }
@@ -117,7 +141,6 @@ class Persist {
                // guardamos el objeto
                    do {
                        try self.managedObjectContext?.save()
-                       print("se guardo la infooooo segun en carrito xdxd")
                    }
                    catch {
                        print ("No se puede guardar a la BD \(error.localizedDescription)")
@@ -134,8 +157,6 @@ class Persist {
                print("se hizo el request")
                let tmp = try self.managedObjectContext!.fetch(request)
                resultset = tmp as! [Carrito]
-               //print("____________")
-             //  print(resultset)
            }
            catch {
                print ("fallo el request \(error.localizedDescription)")
@@ -145,7 +166,6 @@ class Persist {
     
     func borrarCart(_ indice : Int){
             self.managedObjectContext?.delete(self.obtenerCart()[indice])
-            print("se borro la infooooo segun cart xdxd")
         do {
            try self.managedObjectContext?.save()
             print("se guardo ya borrada de cart xdxd")}

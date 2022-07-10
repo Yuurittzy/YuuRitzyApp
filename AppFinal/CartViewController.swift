@@ -20,6 +20,8 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
         super.viewDidLoad()
         title = "Carrito"
        arrayQuantity = [Int](repeating: 1, count: 6)
+        let dir = Persist().obtenerDireccion().first
+        adress.text = "Envío a \(dir!.delegacion ?? "") ... \(dir!.cp ?? "")"
     }
     
     override func viewWillAppear(_ animated: Bool) {

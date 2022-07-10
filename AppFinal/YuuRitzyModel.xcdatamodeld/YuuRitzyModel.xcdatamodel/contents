@@ -5,25 +5,27 @@
         <attribute name="nombre" optional="YES" attributeType="String"/>
         <attribute name="preciofinal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
+    <entity name="Direccion" representedClassName="Direccion" syncable="YES" codeGenerationType="class">
+        <attribute name="calle" optional="YES" attributeType="String"/>
+        <attribute name="colonia" optional="YES" attributeType="String"/>
+        <attribute name="cp" optional="YES" attributeType="String"/>
+        <attribute name="delegacion" optional="YES" attributeType="String"/>
+        <attribute name="numCalle" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Favoritos" representedClassName="Favoritos" syncable="YES" codeGenerationType="class">
         <attribute name="calificacion" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="nombre" attributeType="String"/>
         <attribute name="precioFinal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Persona" representedClassName="Persona" syncable="YES" codeGenerationType="class">
-        <attribute name="calle" optional="YES" attributeType="String"/>
-        <attribute name="colonia" optional="YES" attributeType="String"/>
-        <attribute name="cp" optional="YES" attributeType="String"/>
-        <attribute name="delegacion" optional="YES" attributeType="String"/>
         <attribute name="foto" optional="YES" attributeType="String"/>
         <attribute name="nombre" optional="YES" attributeType="String"/>
-        <attribute name="numCalle" optional="YES" attributeType="String"/>
-        <attribute name="ref" optional="YES" attributeType="String"/>
         <attribute name="telefono" optional="YES" attributeType="String"/>
     </entity>
     <elements>
         <element name="Carrito" positionX="-36" positionY="9" width="128" height="74"/>
         <element name="Favoritos" positionX="-54" positionY="-9" width="128" height="74"/>
-        <element name="Persona" positionX="-18" positionY="27" width="128" height="164"/>
+        <element name="Direccion" positionX="-18" positionY="27" width="128" height="104"/>
+        <element name="Persona" positionX="-36" positionY="81" width="128" height="74"/>
     </elements>
 </model>

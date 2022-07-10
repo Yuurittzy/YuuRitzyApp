@@ -101,17 +101,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
             else {
                 guard let lugar = lugares?.first else { return }
-                let thoroughfare = (lugar.thoroughfare ?? "")
-                let subThoroughfare = (lugar.subThoroughfare ?? "")
-                let locality = (lugar.locality ?? "")
-                let subLocality = (lugar.subLocality ?? "")
-                let administrativeArea = (lugar.administrativeArea ?? "")
-                let subAdministrativeArea = (lugar.subAdministrativeArea ?? "")
+                let thoroughfare = (lugar.thoroughfare ?? "") //calle
+                let subThoroughfare = (lugar.subThoroughfare ?? "") // num
+                let locality = (lugar.locality ?? "") //cd
+                let subLocality = (lugar.subLocality ?? "")//col
+                let administrativeArea = (lugar.administrativeArea ?? "")//edo
+                let subAdministrativeArea = (lugar.subAdministrativeArea ?? "")//cd
                 let postalCode = (lugar.postalCode ?? "")
                 let country = (lugar.country ?? "")
                 self.lblLocation.text = "¿Compras desde \(subAdministrativeArea) ... \(postalCode)"
                 print( "Dirección: \(thoroughfare) \(subThoroughfare) \(locality) \(subLocality) \(administrativeArea) \(subAdministrativeArea) \(postalCode) \(country)")
-               // textView.text = "Usted está en: \(ubicacion.coordinate.latitude), \(ubicacion.coordinate.longitude)\n" + direccion
+                if (Persist().obtenerDireccion().count == 0){
+                    Persist().guardaDireccion(thoroughfare, subThoroughfare, subLocality, postalCode, subAdministrativeArea)
+                    
+                }
             }
         }
     }

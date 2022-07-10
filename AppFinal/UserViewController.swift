@@ -9,9 +9,13 @@ import UIKit
 
 class UserViewController: UIViewController {
 
+    @IBOutlet weak var direccion: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Mi cuenta"
+        let dir = Persist().obtenerDireccion().first
+        direccion.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "")"
         // Do any additional setup after loading the view.
     }
     
