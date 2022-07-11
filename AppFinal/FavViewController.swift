@@ -19,14 +19,14 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Favoritos"
-        let dir = Persist().obtenerDireccion().first
-        direction.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "")"
+        
     }
    
     override func viewWillAppear(_ animated: Bool) {
         persist = Persist().obtenerFav()
         collectionVieww.reloadData()
-       
+        let dir = Persist().obtenerDireccion().first
+        direction.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?"
             
     }
         

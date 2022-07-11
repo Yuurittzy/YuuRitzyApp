@@ -10,6 +10,7 @@
         <attribute name="colonia" optional="YES" attributeType="String"/>
         <attribute name="cp" optional="YES" attributeType="String"/>
         <attribute name="delegacion" optional="YES" attributeType="String"/>
+        <attribute name="estado" optional="YES" attributeType="String"/>
         <attribute name="numCalle" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Favoritos" representedClassName="Favoritos" syncable="YES" codeGenerationType="class">
@@ -24,8 +25,8 @@
     </entity>
     <elements>
         <element name="Carrito" positionX="-36" positionY="9" width="128" height="74"/>
+        <element name="Direccion" positionX="-18" positionY="27" width="128" height="119"/>
         <element name="Favoritos" positionX="-54" positionY="-9" width="128" height="74"/>
-        <element name="Direccion" positionX="-18" positionY="27" width="128" height="104"/>
         <element name="Persona" positionX="-36" positionY="81" width="128" height="74"/>
     </elements>
 </model>

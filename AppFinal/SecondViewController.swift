@@ -42,8 +42,7 @@ class SecondViewController: UIViewController {
         title="Yuu Ritzy"
         let attributeString: NSMutableAttributedString =  NSMutableAttributedString(string: "$ " + String(personaje!.price))
             attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 1, range: NSMakeRange(0, attributeString.length))
-        let dir = Persist().obtenerDireccion().first
-        direccion.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "")" 
+        
         starsRating.rating = personaje!.stars
         titleCajaDe.text = "Caja sorpresa con \n temática de " + personaje!.name.capitalized
         cajaPreview.image = UIImage(named:  personaje!.name + "Preview")
@@ -55,6 +54,8 @@ class SecondViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let dir = Persist().obtenerDireccion().first
+        direccion.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?" 
         // AL HACER TAP EN EL ICONO DE FAV SE CREAN LAS VARIABLES PARA FORMAR LA ACCION
         let tap = UITapGestureRecognizer(target: self, action: #selector(SecondViewController.tappedMe))
         icFav.addGestureRecognizer(tap)

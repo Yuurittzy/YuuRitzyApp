@@ -19,12 +19,13 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Carrito"
-       arrayQuantity = [Int](repeating: 1, count: 6)
-        let dir = Persist().obtenerDireccion().first
-        adress.text = "Envío a \(dir!.delegacion ?? "") ... \(dir!.cp ?? "")"
+        arrayQuantity = [Int](repeating: 1, count: 6)
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let dir = Persist().obtenerDireccion().first
+        adress.text = "Envío a \(dir!.delegacion ?? "") ... \(dir!.cp ?? "")"
         carrito = Persist().obtenerCart()
         totalFun()
         collectionVieww.reloadData()
@@ -33,6 +34,7 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
         }else {
             btnComprar.isEnabled = true
         }
+        
 
     }
     

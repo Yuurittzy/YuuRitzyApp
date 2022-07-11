@@ -33,7 +33,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde Ciudad de México...08400?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctz-gd-4WO">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde  ... ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctz-gd-4WO">
                                 <rect key="frame" x="40" y="88" width="374" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
@@ -203,7 +203,6 @@
                                                     <userDefinedRuntimeAttribute type="number" keyPath="fillMode">
                                                         <integer key="value" value="1"/>
                                                     </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="text" value="(120)"/>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                         <color key="value" name="Purple2"/>
                                                     </userDefinedRuntimeAttribute>
@@ -348,7 +347,7 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="lVy-hr-pjC"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Ng5-LI-iJi"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde Ciudad de México...08400?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP2-YP-iL8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde ... ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GP2-YP-iL8">
                                 <rect key="frame" x="40" y="88" width="374" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
@@ -409,7 +408,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde Ciudad de México...08400?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0c-rb-pVF">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde ... ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0c-rb-pVF">
                                 <rect key="frame" x="40" y="88" width="374" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
@@ -486,7 +485,6 @@
                                                         <userDefinedRuntimeAttribute type="color" keyPath="textColor">
                                                             <color key="value" name="Purple2"/>
                                                         </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="text" value="(120)"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0l-yR-UGN" userLabel="price">
@@ -583,8 +581,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde Ciudad de México...08400?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Ds-WXz">
-                                <rect key="frame" x="40" y="88" width="322" height="40"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde  ...  ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Ds-WXz">
+                                <rect key="frame" x="40" y="88" width="374" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xXX-Uk-6Xm"/>
@@ -602,15 +600,8 @@
                                     <constraint firstAttribute="width" constant="40" id="CUV-BW-S1N"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1ua-ZU-dpn">
-                                <rect key="frame" x="0.0" y="158.5" width="362" height="169"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="170" id="AXi-Dy-vdQ"/>
-                                    <constraint firstAttribute="width" constant="170" id="vtt-wB-0Pa"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola, Juanito!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-PA-XKa" userLabel="Hola">
-                                <rect key="frame" x="0.0" y="343" width="362" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-PA-XKa" userLabel="Hola">
+                                <rect key="frame" x="0.0" y="343" width="414" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -671,6 +662,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Mi carrito">
                                     <fontDescription key="titleFontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="KCV-iI-zm0" kind="showDetail" id="gmc-jF-XMw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uho-dn-pA1">
                                 <rect key="frame" x="110" y="548" width="135.5" height="30"/>
@@ -682,6 +676,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Mi dirección">
                                     <fontDescription key="titleFontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="tDN-Jz-tJF" kind="show" id="iaf-fM-Rik"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGB-zQ-79Y">
                                 <rect key="frame" x="110" y="608" width="162.5" height="30"/>
@@ -711,6 +708,14 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="pyd-1T-F9s"/>
                                     <constraint firstAttribute="height" constant="30" id="v6M-DN-eIx"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="1ua-ZU-dpn">
+                                <rect key="frame" x="110" y="153.5" width="198.5" height="169"/>
+                                <color key="tintColor" name="Aqua"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="170" id="AXi-Dy-vdQ"/>
+                                    <constraint firstAttribute="width" constant="170" id="vtt-wB-0Pa"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -1160,9 +1165,80 @@
             </objects>
             <point key="canvasLocation" x="2612" y="-502"/>
         </scene>
+        <!--Direction View Controller-->
+        <scene sceneID="4da-Xc-1AM">
+            <objects>
+                <viewController id="tDN-Jz-tJF" customClass="DirectionViewController" customModule="AppFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XZz-IV-4L3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de envío" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjM-EB-mgS">
+                                <rect key="frame" x="0.0" y="108" width="414" height="30"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxD-6C-8jO">
+                                <rect key="frame" x="131" y="739" width="152" height="54"/>
+                                <color key="tintColor" name="Purple2"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cambiar dirección">
+                                    <fontDescription key="titleFontDescription" name="Quicksand-SemiBold" family="Quicksand" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickEditar:" destination="tDN-Jz-tJF" eventType="touchUpInside" id="Ecr-QJ-5KD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-BH-15H">
+                                <rect key="frame" x="30" y="158" width="354" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pHU-sB-sBS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="bottom" secondItem="wxD-6C-8jO" secondAttribute="bottom" constant="20" id="Cey-3y-KVO"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="uwR-BH-15H" secondAttribute="trailing" constant="30" id="Cyw-RW-zmb"/>
+                            <constraint firstItem="wxD-6C-8jO" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="131" id="Fnj-cJ-djo"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="YjM-EB-mgS" secondAttribute="trailing" id="NTw-Id-wpW"/>
+                            <constraint firstItem="YjM-EB-mgS" firstAttribute="top" secondItem="pHU-sB-sBS" secondAttribute="top" constant="20" id="VCe-0F-Nff"/>
+                            <constraint firstItem="uwR-BH-15H" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="30" id="Zte-hN-DgT"/>
+                            <constraint firstItem="uwR-BH-15H" firstAttribute="top" secondItem="YjM-EB-mgS" secondAttribute="bottom" constant="20" id="eJC-ib-unv"/>
+                            <constraint firstItem="YjM-EB-mgS" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" id="eeV-tm-JjV"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="wxD-6C-8jO" secondAttribute="trailing" constant="131" id="m6O-Zd-TJO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sKJ-H7-UaV"/>
+                    <connections>
+                        <outlet property="navItem" destination="sKJ-H7-UaV" id="OjH-FP-BAG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7T-Or-PiU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4286" y="-502"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JLY-ME-y2B">
+            <objects>
+                <viewController id="L8K-SS-DXw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eBR-vT-Vky">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TQk-8m-rL5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w48-fJ-qOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5165" y="-502"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="yRI-zu-rJe"/>
+        <segue reference="gmc-jF-XMw"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Image" width="419" height="241"/>

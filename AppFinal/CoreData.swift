@@ -50,7 +50,7 @@ class Persist {
             return moc
         }()
     
-    func guardaDireccion(_ calle: String!, _ numCasa: String, _ colonia: String, _ cp: String, _ delegacion: String!) {
+    func guardaDireccion(_ calle: String!, _ numCasa: String, _ colonia: String, _ cp: String, _ delegacion: String, _ estado : String) {
             if let entidad = NSEntityDescription.entity(forEntityName:"Direccion", in:self.managedObjectContext!) {
                 let unDir = NSManagedObject(entity: entidad, insertInto: self.managedObjectContext!) as! Direccion
                 unDir.calle = calle
@@ -58,6 +58,7 @@ class Persist {
                 unDir.colonia = colonia
                 unDir.cp = cp
                 unDir.delegacion = delegacion
+                unDir.estado = estado
                    do {
                        try self.managedObjectContext?.save()
                        print("se guardo la infooooo en dir")
@@ -83,6 +84,24 @@ class Persist {
            }
             return resultset
        }
+    
+    func borrarDir(){
+        if (obtenerDireccion().count != 0 ){
+        for i in 0...obtenerDireccion().count-1 {
+            
+            self.managedObjectContext?.delete(self.obtenerDireccion()[i])
+            print("se borro la infooooo segun dire xdxd")
+        }
+        
+        do {
+           try self.managedObjectContext?.save()
+        }
+        catch{
+            print("F")
+        }
+        }
+    }
+    
     
     func guardaEnFav(_ nombre: String!, _ calificacion: Double, _ precio: Int) {
            // creamos un nuevo objeto de tipo "Log"

@@ -7,16 +7,18 @@
 
 import UIKit
 import CoreLocation
-
+import Network
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, CLLocationManagerDelegate {
     
-//    @IBOutlet weak var collectionView1: UICollectionView!
     @IBOutlet weak var lblLocation: UILabel!
     @IBOutlet weak var collectionV: UICollectionView!
     
     let datos = DataSet()
     var admUbicacion = CLLocationManager()
+    var internetStatus = false
+    var internetType = ""
+    var aux = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,31 +27,66 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //PARA UBICACION
         admUbicacion.desiredAccuracy = kCLLocationAccuracyHundredMeters
         admUbicacion.delegate = self
+        //PARA VERIFICAR ACCESO A INTERNET
+        let monitor = NWPathMonitor()
+              monitor.pathUpdateHandler = { path in
+                  if path.status != .satisfied {
+                      self.internetStatus = false
+                  }
+                  else {
+                      self.internetStatus = true
+                      if path.usesInterfaceType(.wifi) {
+                          self.internetType = "Wifi"
+                      }
+                      else if path.usesInterfaceType(.cellular) {
+                          self.internetType = "Cellular"
+                      }
+                  }
+              }
+              monitor.start(queue: DispatchQueue.global())
         
     }
+    override func viewDidAppear(_ animated: Bool) {
+        if (!(internetStatus) && aux == 0 ){
+                    let alert = UIAlertController(title: "No se puede acceder a la ubicación", message: "No hay conexión a internet", preferredStyle: .alert)
+                    let boton = UIAlertAction(title: "Ok", style: .default)
+                    alert.addAction(boton)
+                    self.present(alert, animated:true)
+                    Persist().guardaDireccion("", "", "", "", "", "")
+                    aux = 1 //permite que la alerta solo se muestre una vez
+        }
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        // Verificamos si la geolocalización está activada
-        if CLLocationManager.locationServicesEnabled() {
-            switch admUbicacion.authorizationStatus {
-                case .notDetermined: admUbicacion.requestAlwaysAuthorization()
-                case .restricted:
-                    let alert = UIAlertController(title: "Error", message: "Permite utilizar su ubicación actual para envío?", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "SI", style: UIAlertAction.Style.default, handler: { action in
-                        guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
-                        if UIApplication.shared.canOpenURL(settingsUrl) {
-                            UIApplication.shared.open(settingsUrl, options: [:],completionHandler:nil)
-                        }
-                    }))
-                    alert.addAction(UIAlertAction(title: "NO", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+        
+        if internetStatus {
+        // Verificamos si la geolocalización está activada si es que hay internet
+            if CLLocationManager.locationServicesEnabled() {
+                switch admUbicacion.authorizationStatus {
+                    case .notDetermined: admUbicacion.requestAlwaysAuthorization()
+                    case .restricted:
+                        let alert = UIAlertController(title: "Error", message: "Permite utilizar su ubicación actual para envío?", preferredStyle: UIAlertController.Style.alert)
+                        alert.addAction(UIAlertAction(title: "SI", style: UIAlertAction.Style.default, handler: { action in
+                            guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
+                            if UIApplication.shared.canOpenURL(settingsUrl) {
+                                UIApplication.shared.open(settingsUrl, options: [:],completionHandler:nil)
+                            }
+                        }))
+                        alert.addAction(UIAlertAction(title: "NO", style: UIAlertAction.Style.default, handler: nil))
+                        self.present(alert, animated: true, completion: nil)
 
-                default: admUbicacion.startUpdatingLocation()
+                    default: admUbicacion.startUpdatingLocation()
+                }
             }
-        }
-        else {
-            // ?
+            else {
+                Persist().guardaDireccion("", "", "", "", "", "")
+            }
+            if (Persist().obtenerDireccion().count == 1){
+                let dir = Persist().obtenerDireccion().first
+                lblLocation.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?"
+            }
         }
     }
     
@@ -109,10 +146,10 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let subAdministrativeArea = (lugar.subAdministrativeArea ?? "")//cd
                 let postalCode = (lugar.postalCode ?? "")
                 let country = (lugar.country ?? "")
-                self.lblLocation.text = "¿Compras desde \(subAdministrativeArea) ... \(postalCode)"
                 print( "Dirección: \(thoroughfare) \(subThoroughfare) \(locality) \(subLocality) \(administrativeArea) \(subAdministrativeArea) \(postalCode) \(country)")
                 if (Persist().obtenerDireccion().count == 0){
-                    Persist().guardaDireccion(thoroughfare, subThoroughfare, subLocality, postalCode, subAdministrativeArea)
+                    self.lblLocation.text = "¿Compras desde \(subAdministrativeArea) ... \(postalCode) ?"
+                    Persist().guardaDireccion(thoroughfare, subThoroughfare, subLocality, postalCode, subAdministrativeArea, administrativeArea)
                     
                 }
             }
@@ -123,6 +160,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // Que sigue?
         // no se pueden obtener lecturas que cumplan con la precisión deseada
         admUbicacion.stopUpdatingLocation()
+        Persist().guardaDireccion("", "", "", "", "", "")
+        
     }
 }
   
