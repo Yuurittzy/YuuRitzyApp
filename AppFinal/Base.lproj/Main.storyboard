@@ -582,7 +582,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Compras desde  ...  ?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7vv-Ds-WXz">
-                                <rect key="frame" x="40" y="88" width="374" height="40"/>
+                                <rect key="frame" x="40" y="88" width="158.5" height="40"/>
                                 <color key="backgroundColor" name="Yellow"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="xXX-Uk-6Xm"/>
@@ -601,7 +601,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hola!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ibo-PA-XKa" userLabel="Hola">
-                                <rect key="frame" x="0.0" y="343" width="414" height="35"/>
+                                <rect key="frame" x="0.0" y="343" width="198.5" height="35"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1174,13 +1174,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Datos de envío" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YjM-EB-mgS">
-                                <rect key="frame" x="0.0" y="108" width="414" height="30"/>
+                                <rect key="frame" x="0.0" y="128" width="414" height="30"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Medium" family="Quicksand" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wxD-6C-8jO">
-                                <rect key="frame" x="131" y="739" width="152" height="54"/>
+                                <rect key="frame" x="100" y="739" width="214" height="34"/>
                                 <color key="tintColor" name="Purple2"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Cambiar dirección">
@@ -1191,7 +1191,85 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwR-BH-15H">
-                                <rect key="frame" x="30" y="158" width="354" height="20"/>
+                                <rect key="frame" x="40" y="198" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA6-uw-0PJ" userLabel="lblCalle">
+                                <rect key="frame" x="40" y="228" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="och-3O-Oo2" userLabel="lblNum">
+                                <rect key="frame" x="40" y="297" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Número" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="akE-Bh-Ya7">
+                                <rect key="frame" x="40" y="267" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhm-TL-haE" userLabel="lblColonia">
+                                <rect key="frame" x="40" y="366" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Colonia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VrN-xX-VDW">
+                                <rect key="frame" x="40" y="336" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8N8-s1-fIZ" userLabel="lblCp">
+                                <rect key="frame" x="40" y="435" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Código Postal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erD-I4-Awv">
+                                <rect key="frame" x="40" y="405" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XSj-ha-r9Z" userLabel="lblDelegación">
+                                <rect key="frame" x="40" y="504" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delegación o Municipio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbs-fC-OYD">
+                                <rect key="frame" x="40" y="474" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PA-OD-iFU" userLabel="lblEstado">
+                                <rect key="frame" x="40" y="573" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6TT-JH-duu">
+                                <rect key="frame" x="40" y="543" width="334" height="20"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="México" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BE-CQ-3mt">
+                                <rect key="frame" x="40" y="642" width="334" height="19"/>
+                                <fontDescription key="fontDescription" name="Quicksand-Regular" family="Quicksand" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="País" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dXn-my-yVe">
+                                <rect key="frame" x="40" y="612" width="334" height="20"/>
                                 <fontDescription key="fontDescription" name="Quicksand-Bold" family="Quicksand" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1200,19 +1278,71 @@
                         <viewLayoutGuide key="safeArea" id="pHU-sB-sBS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="pHU-sB-sBS" firstAttribute="bottom" secondItem="wxD-6C-8jO" secondAttribute="bottom" constant="20" id="Cey-3y-KVO"/>
-                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="uwR-BH-15H" secondAttribute="trailing" constant="30" id="Cyw-RW-zmb"/>
-                            <constraint firstItem="wxD-6C-8jO" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="131" id="Fnj-cJ-djo"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="Vhm-TL-haE" secondAttribute="trailing" constant="40" id="0wg-Kf-Eqm"/>
+                            <constraint firstItem="XSj-ha-r9Z" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="3FH-WA-bg9"/>
+                            <constraint firstItem="nbs-fC-OYD" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="3dV-h6-YrC"/>
+                            <constraint firstItem="6TT-JH-duu" firstAttribute="top" secondItem="XSj-ha-r9Z" secondAttribute="bottom" constant="20" id="7Ra-r8-7en"/>
+                            <constraint firstItem="7BE-CQ-3mt" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="7xx-cV-L0c"/>
+                            <constraint firstItem="Vhm-TL-haE" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="8LI-5o-jwi"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="erD-I4-Awv" secondAttribute="trailing" constant="40" id="8az-oL-p4i"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="bottom" secondItem="wxD-6C-8jO" secondAttribute="bottom" constant="40" id="Cey-3y-KVO"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="uwR-BH-15H" secondAttribute="trailing" constant="40" id="Cyw-RW-zmb"/>
+                            <constraint firstItem="VrN-xX-VDW" firstAttribute="top" secondItem="och-3O-Oo2" secondAttribute="bottom" constant="20" id="Dl4-Nf-XBY"/>
+                            <constraint firstItem="wxD-6C-8jO" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="100" id="Fnj-cJ-djo"/>
+                            <constraint firstItem="Vhm-TL-haE" firstAttribute="top" secondItem="VrN-xX-VDW" secondAttribute="bottom" constant="10" id="I40-C4-W71"/>
+                            <constraint firstItem="och-3O-Oo2" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="KnQ-Z7-ast"/>
+                            <constraint firstItem="VrN-xX-VDW" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="Mn3-0X-bhQ"/>
                             <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="YjM-EB-mgS" secondAttribute="trailing" id="NTw-Id-wpW"/>
-                            <constraint firstItem="YjM-EB-mgS" firstAttribute="top" secondItem="pHU-sB-sBS" secondAttribute="top" constant="20" id="VCe-0F-Nff"/>
-                            <constraint firstItem="uwR-BH-15H" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="30" id="Zte-hN-DgT"/>
-                            <constraint firstItem="uwR-BH-15H" firstAttribute="top" secondItem="YjM-EB-mgS" secondAttribute="bottom" constant="20" id="eJC-ib-unv"/>
+                            <constraint firstItem="qA6-uw-0PJ" firstAttribute="top" secondItem="uwR-BH-15H" secondAttribute="bottom" constant="10" id="NlO-E7-xuO"/>
+                            <constraint firstItem="8N8-s1-fIZ" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="QX3-l8-B4L"/>
+                            <constraint firstItem="qA6-uw-0PJ" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="RHZ-PX-S70"/>
+                            <constraint firstItem="8N8-s1-fIZ" firstAttribute="top" secondItem="erD-I4-Awv" secondAttribute="bottom" constant="10" id="S3z-3s-gMA"/>
+                            <constraint firstItem="7BE-CQ-3mt" firstAttribute="top" secondItem="dXn-my-yVe" secondAttribute="bottom" constant="10" id="Tzm-56-ydq"/>
+                            <constraint firstItem="YjM-EB-mgS" firstAttribute="top" secondItem="pHU-sB-sBS" secondAttribute="top" constant="40" id="VCe-0F-Nff"/>
+                            <constraint firstItem="akE-Bh-Ya7" firstAttribute="top" secondItem="qA6-uw-0PJ" secondAttribute="bottom" constant="20" id="VZi-fn-fxR"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="och-3O-Oo2" secondAttribute="trailing" constant="40" id="WBg-7L-7B2"/>
+                            <constraint firstItem="6TT-JH-duu" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="WlU-fy-8dY"/>
+                            <constraint firstItem="dXn-my-yVe" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="XqG-oz-3QL"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="1PA-OD-iFU" secondAttribute="trailing" constant="40" id="Ys5-Da-SeW"/>
+                            <constraint firstItem="8N8-s1-fIZ" firstAttribute="top" secondItem="erD-I4-Awv" secondAttribute="bottom" constant="10" id="ZHZ-0U-rZY"/>
+                            <constraint firstItem="uwR-BH-15H" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="Zte-hN-DgT"/>
+                            <constraint firstItem="och-3O-Oo2" firstAttribute="top" secondItem="akE-Bh-Ya7" secondAttribute="bottom" constant="10" id="aeV-BN-Bdf"/>
+                            <constraint firstItem="XSj-ha-r9Z" firstAttribute="top" secondItem="nbs-fC-OYD" secondAttribute="bottom" constant="10" id="axD-uv-KCZ"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="dXn-my-yVe" secondAttribute="trailing" constant="40" id="bL9-mk-2dq"/>
+                            <constraint firstItem="1PA-OD-iFU" firstAttribute="top" secondItem="6TT-JH-duu" secondAttribute="bottom" constant="10" id="bP5-yF-6gR"/>
+                            <constraint firstItem="1PA-OD-iFU" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="c68-9f-zyJ"/>
+                            <constraint firstItem="uwR-BH-15H" firstAttribute="top" secondItem="YjM-EB-mgS" secondAttribute="bottom" constant="40" id="eJC-ib-unv"/>
                             <constraint firstItem="YjM-EB-mgS" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" id="eeV-tm-JjV"/>
-                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="wxD-6C-8jO" secondAttribute="trailing" constant="131" id="m6O-Zd-TJO"/>
+                            <constraint firstItem="akE-Bh-Ya7" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="f6f-Rv-Vc0"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="akE-Bh-Ya7" secondAttribute="trailing" constant="40" id="fDB-uW-YeO"/>
+                            <constraint firstItem="1PA-OD-iFU" firstAttribute="top" secondItem="6TT-JH-duu" secondAttribute="bottom" constant="10" id="fis-ji-Yao"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="XSj-ha-r9Z" secondAttribute="trailing" constant="40" id="g9A-I5-4ef"/>
+                            <constraint firstItem="7BE-CQ-3mt" firstAttribute="top" secondItem="dXn-my-yVe" secondAttribute="bottom" constant="10" id="ksW-EL-YNL"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="6TT-JH-duu" secondAttribute="trailing" constant="40" id="l88-nj-E07"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="wxD-6C-8jO" secondAttribute="trailing" constant="100" id="m6O-Zd-TJO"/>
+                            <constraint firstItem="XSj-ha-r9Z" firstAttribute="top" secondItem="nbs-fC-OYD" secondAttribute="bottom" constant="10" id="mZ0-Zz-gKH"/>
+                            <constraint firstItem="erD-I4-Awv" firstAttribute="leading" secondItem="pHU-sB-sBS" secondAttribute="leading" constant="40" id="pQH-En-oDT"/>
+                            <constraint firstItem="erD-I4-Awv" firstAttribute="top" secondItem="Vhm-TL-haE" secondAttribute="bottom" constant="20" id="rjR-9b-UbF"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="7BE-CQ-3mt" secondAttribute="trailing" constant="40" id="rsE-WB-2tp"/>
+                            <constraint firstItem="och-3O-Oo2" firstAttribute="top" secondItem="akE-Bh-Ya7" secondAttribute="bottom" constant="10" id="snc-AY-FAw"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="qA6-uw-0PJ" secondAttribute="trailing" constant="40" id="v0D-Mb-DbK"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="VrN-xX-VDW" secondAttribute="trailing" constant="40" id="vWS-wH-csg"/>
+                            <constraint firstItem="Vhm-TL-haE" firstAttribute="top" secondItem="VrN-xX-VDW" secondAttribute="bottom" constant="10" id="woz-bZ-Kae"/>
+                            <constraint firstItem="nbs-fC-OYD" firstAttribute="top" secondItem="8N8-s1-fIZ" secondAttribute="bottom" constant="20" id="yjM-KL-vZB"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="nbs-fC-OYD" secondAttribute="trailing" constant="40" id="zLr-Sz-WRc"/>
+                            <constraint firstItem="dXn-my-yVe" firstAttribute="top" secondItem="1PA-OD-iFU" secondAttribute="bottom" constant="20" id="zqE-v8-qnx"/>
+                            <constraint firstItem="pHU-sB-sBS" firstAttribute="trailing" secondItem="8N8-s1-fIZ" secondAttribute="trailing" constant="40" id="zrW-Hj-WWN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sKJ-H7-UaV"/>
                     <connections>
+                        <outlet property="lblCalle" destination="qA6-uw-0PJ" id="dRF-j8-PwA"/>
+                        <outlet property="lblColonia" destination="Vhm-TL-haE" id="XYk-OH-Dct"/>
+                        <outlet property="lblCp" destination="8N8-s1-fIZ" id="aYM-9h-Er6"/>
+                        <outlet property="lblDelegación" destination="XSj-ha-r9Z" id="cec-5U-ePq"/>
+                        <outlet property="lblEstado" destination="1PA-OD-iFU" id="ATc-JX-EJx"/>
+                        <outlet property="lblPais" destination="7BE-CQ-3mt" id="pcx-Ef-Ghh"/>
+                        <outlet property="lblnum" destination="och-3O-Oo2" id="Za7-iT-Omz"/>
                         <outlet property="navItem" destination="sKJ-H7-UaV" id="OjH-FP-BAG"/>
                     </connections>
                 </viewController>

@@ -76,8 +76,6 @@ class Persist {
            do {
                let tmp = try self.managedObjectContext!.fetch(request)
                resultset = tmp as! [Direccion]
-               print("____________")
-               print(resultset)
            }
            catch {
                print ("fallo el request \(error.localizedDescription)")
@@ -88,9 +86,7 @@ class Persist {
     func borrarDir(){
         if (obtenerDireccion().count != 0 ){
         for i in 0...obtenerDireccion().count-1 {
-            
             self.managedObjectContext?.delete(self.obtenerDireccion()[i])
-            print("se borro la infooooo segun dire xdxd")
         }
         
         do {
@@ -140,7 +136,6 @@ class Persist {
     
     func borrar(_ indice : Int){
             self.managedObjectContext?.delete(self.obtenerFav()[indice])
-            print("se borro la infooooo segun fav xdxd")
         do {
            try self.managedObjectContext?.save()
         }
@@ -173,7 +168,6 @@ class Persist {
             var resultset = [Carrito]()
            let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Carrito")
            do {
-               print("se hizo el request")
                let tmp = try self.managedObjectContext!.fetch(request)
                resultset = tmp as! [Carrito]
            }
@@ -187,7 +181,7 @@ class Persist {
             self.managedObjectContext?.delete(self.obtenerCart()[indice])
         do {
            try self.managedObjectContext?.save()
-            print("se guardo ya borrada de cart xdxd")}
+       }
         catch{
             print("F")
         }

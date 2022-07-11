@@ -130,7 +130,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         // que hacemos con la ubicación?
         // las ubicaciones obtenidas se ordenan de la mejor a la peor, asi que tomamos la primera
         guard let ubicacion = locations.first else { return }
-        print ("\(ubicacion.coordinate.latitude), \(ubicacion.coordinate.longitude)")
         CLGeocoder().reverseGeocodeLocation(ubicacion) { lugares, error in
            // var direccion = ""
             if error != nil {
@@ -140,13 +139,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 guard let lugar = lugares?.first else { return }
                 let thoroughfare = (lugar.thoroughfare ?? "") //calle
                 let subThoroughfare = (lugar.subThoroughfare ?? "") // num
-                let locality = (lugar.locality ?? "") //cd
                 let subLocality = (lugar.subLocality ?? "")//col
                 let administrativeArea = (lugar.administrativeArea ?? "")//edo
                 let subAdministrativeArea = (lugar.subAdministrativeArea ?? "")//cd
                 let postalCode = (lugar.postalCode ?? "")
                 let country = (lugar.country ?? "")
-                print( "Dirección: \(thoroughfare) \(subThoroughfare) \(locality) \(subLocality) \(administrativeArea) \(subAdministrativeArea) \(postalCode) \(country)")
                 if (Persist().obtenerDireccion().count == 0){
                     self.lblLocation.text = "¿Compras desde \(subAdministrativeArea) ... \(postalCode) ?"
                     Persist().guardaDireccion(thoroughfare, subThoroughfare, subLocality, postalCode, subAdministrativeArea, administrativeArea)

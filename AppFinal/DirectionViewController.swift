@@ -9,13 +9,35 @@ import UIKit
 
 class DirectionViewController: UIViewController {
 
+    @IBOutlet weak var lblCalle: UILabel!
+    @IBOutlet weak var lblnum: UILabel!
+    @IBOutlet weak var lblColonia: UILabel!
+    @IBOutlet weak var lblCp: UILabel!
     @IBOutlet weak var navItem: UINavigationItem!
+    @IBOutlet weak var lblDelegación: UILabel!
+    @IBOutlet weak var lblEstado: UILabel!
+    @IBOutlet weak var lblPais: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title="Mi Dirección"
        navItem.hidesBackButton = true
     
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let direccion = Persist().obtenerDireccion()[0]
+        lblCalle.text = direccion.calle
+        lblnum.text = direccion.numCalle
+        lblColonia.text = direccion.colonia
+        lblCp.text = direccion.cp
+        lblDelegación.text = direccion.delegacion
+        lblEstado.text = direccion.estado
+        lblPais.text = "México"
+        
+    }
+    
     @IBAction func clickEditar(_ sender: Any) {
         let alert = UIAlertController(title: "Cambiar dirección", message: "Introduce cuidadosamente los datos", preferredStyle: UIAlertController.Style.alert)
                alert.addAction(UIAlertAction(title: "Cancelar", style: UIAlertAction.Style.cancel, handler: nil))
