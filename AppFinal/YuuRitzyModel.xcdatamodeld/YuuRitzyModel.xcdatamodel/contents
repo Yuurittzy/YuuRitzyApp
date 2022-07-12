@@ -19,7 +19,7 @@
         <attribute name="precioFinal" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
     </entity>
     <entity name="Persona" representedClassName="Persona" syncable="YES" codeGenerationType="class">
-        <attribute name="foto" optional="YES" attributeType="String"/>
+        <attribute name="foto" optional="YES" attributeType="Binary"/>
         <attribute name="nombre" optional="YES" attributeType="String"/>
         <attribute name="telefono" optional="YES" attributeType="String"/>
     </entity>

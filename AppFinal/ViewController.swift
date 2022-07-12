@@ -67,7 +67,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 switch admUbicacion.authorizationStatus {
                     case .notDetermined: admUbicacion.requestAlwaysAuthorization()
                     case .restricted:
-                        let alert = UIAlertController(title: "Error", message: "Permite utilizar su ubicación actual para envío?", preferredStyle: UIAlertController.Style.alert)
+                        let alert = UIAlertController(title: "Error", message: "¿Desea utilizar su ubicación actual para envío?", preferredStyle: UIAlertController.Style.alert)
                         alert.addAction(UIAlertAction(title: "SI", style: UIAlertAction.Style.default, handler: { action in
                             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
                             if UIApplication.shared.canOpenURL(settingsUrl) {
@@ -143,7 +143,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 let administrativeArea = (lugar.administrativeArea ?? "")//edo
                 let subAdministrativeArea = (lugar.subAdministrativeArea ?? "")//cd
                 let postalCode = (lugar.postalCode ?? "")
-                let country = (lugar.country ?? "")
+               // let country = (lugar.country ?? "")
                 if (Persist().obtenerDireccion().count == 0){
                     self.lblLocation.text = "¿Compras desde \(subAdministrativeArea) ... \(postalCode) ?"
                     Persist().guardaDireccion(thoroughfare, subThoroughfare, subLocality, postalCode, subAdministrativeArea, administrativeArea)

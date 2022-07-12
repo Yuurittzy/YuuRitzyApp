@@ -97,7 +97,32 @@ class Persist {
         }
         }
     }
-    
+    func guardaPersona(_ nombre: String!, _ dataimage: Data) {
+           
+            if let entidad = NSEntityDescription.entity(forEntityName:"Persona", in:self.managedObjectContext!) {
+                let persona = NSManagedObject(entity: entidad, insertInto: self.managedObjectContext!) as! Persona
+                persona.foto = dataimage
+                persona.nombre = nombre
+                   do {
+                       try self.managedObjectContext?.save()
+                   }
+                   catch {
+                       print ("No se puede guardar a la BD  de persona \(error.localizedDescription)")
+                   }
+           }
+       }
+    func obtenerPersona() -> [Persona] {
+            var resultset = [Persona]()
+           let request = NSFetchRequest<NSFetchRequestResult>(entityName: "Persona")
+           do {
+               let tmp = try self.managedObjectContext!.fetch(request)
+               resultset = tmp as! [Persona]
+           }
+           catch {
+               print ("fallo el request \(error.localizedDescription)")
+           }
+            return resultset
+       }
     
     func guardaEnFav(_ nombre: String!, _ calificacion: Double, _ precio: Int) {
            // creamos un nuevo objeto de tipo "Log"

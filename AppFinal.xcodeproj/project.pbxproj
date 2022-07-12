@@ -12,6 +12,8 @@
 		9A03ACEB286ECCC800E3DB2D /* CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A03ACEA286ECCC700E3DB2D /* CoreData.swift */; };
 		9A2670F3287B7A5D0008FB06 /* DirectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2670F2287B7A5D0008FB06 /* DirectionViewController.swift */; };
 		9A2670F5287BE73A0008FB06 /* Network.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2670F4287BE73A0008FB06 /* Network.framework */; };
+		9A2EA6B7287D30D50032D3AA /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2EA6B6287D30D50032D3AA /* ProfileViewController.swift */; };
+		9A2EA6B9287D3A580032D3AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A2EA6B8287D3A580032D3AA /* AVFoundation.framework */; };
 		9A5656D5287557DE009D9BE1 /* CollectionViewCellCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A5656D4287557DE009D9BE1 /* CollectionViewCellCart.swift */; };
 		9A8CDD6628404BF500290EBE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6528404BF500290EBE /* AppDelegate.swift */; };
 		9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8CDD6728404BF500290EBE /* SceneDelegate.swift */; };
@@ -41,6 +43,8 @@
 		9A03ACEA286ECCC700E3DB2D /* CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreData.swift; sourceTree = "<group>"; };
 		9A2670F2287B7A5D0008FB06 /* DirectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionViewController.swift; sourceTree = "<group>"; };
 		9A2670F4287BE73A0008FB06 /* Network.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Network.framework; path = System/Library/Frameworks/Network.framework; sourceTree = SDKROOT; };
+		9A2EA6B6287D30D50032D3AA /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		9A2EA6B8287D3A580032D3AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9A5656D4287557DE009D9BE1 /* CollectionViewCellCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCart.swift; sourceTree = "<group>"; };
 		9A8CDD6228404BF500290EBE /* AppFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A8CDD6528404BF500290EBE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +76,7 @@
 			files = (
 				9ABB83FA287950DB004C5F19 /* CoreLocation.framework in Frameworks */,
 				9ABD5A8F2869506F004B2D54 /* Cosmos in Frameworks */,
+				9A2EA6B9287D3A580032D3AA /* AVFoundation.framework in Frameworks */,
 				9A03ACE6286EA5FB00E3DB2D /* CoreData.framework in Frameworks */,
 				9A2670F5287BE73A0008FB06 /* Network.framework in Frameworks */,
 			);
@@ -83,6 +88,7 @@
 		9A03ACE4286EA5FB00E3DB2D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A2EA6B8287D3A580032D3AA /* AVFoundation.framework */,
 				9A2670F4287BE73A0008FB06 /* Network.framework */,
 				9ABB83F9287950DB004C5F19 /* CoreLocation.framework */,
 				9A03ACE5286EA5FB00E3DB2D /* CoreData.framework */,
@@ -129,6 +135,7 @@
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
 				9A8CDD7328404BF800290EBE /* Info.plist */,
 				9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */,
+				9A2EA6B6287D30D50032D3AA /* ProfileViewController.swift */,
 			);
 			path = AppFinal;
 			sourceTree = "<group>";
@@ -247,6 +254,7 @@
 				9ABDFAAE2840AF33004BD884 /* CartViewController.swift in Sources */,
 				9A8CDD882840AACF00290EBE /* FavViewController.swift in Sources */,
 				9A8CDD6828404BF500290EBE /* SceneDelegate.swift in Sources */,
+				9A2EA6B7287D30D50032D3AA /* ProfileViewController.swift in Sources */,
 				9A5656D5287557DE009D9BE1 /* CollectionViewCellCart.swift in Sources */,
 				9ABD5A8A28690D46004B2D54 /* DataModel.swift in Sources */,
 			);

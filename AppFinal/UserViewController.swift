@@ -11,17 +11,34 @@ class UserViewController: UIViewController {
 
     @IBOutlet weak var direccion: UILabel!
 
+    @IBOutlet weak var lblHola: UILabel!
+    @IBOutlet weak var ivUser: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Mi cuenta"
-       
-        // Do any additional setup after loading the view.
+        
+        ivUser.layer.cornerRadius = self.ivUser.frame.width/2
+        ivUser.clipsToBounds = true
+        ivUser.layer.borderColor = UIColor.orange.cgColor
+        ivUser.layer.borderWidth = 4
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         let dir = Persist().obtenerDireccion().first
+     
         direccion.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?"
+      
+        if (Persist().obtenerPersona().count != 0)
+        {
+              let persona = Persist().obtenerPersona().first
+              ivUser.image = UIImage(data: (persona?.foto)!)
+            
+            lblHola.text = "Hola, \((persona?.nombre)!)!"
+            
+        }
+        
     }
     
 

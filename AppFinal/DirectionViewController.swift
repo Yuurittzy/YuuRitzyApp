@@ -27,14 +27,7 @@ class DirectionViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        let direccion = Persist().obtenerDireccion()[0]
-        lblCalle.text = direccion.calle
-        lblnum.text = direccion.numCalle
-        lblColonia.text = direccion.colonia
-        lblCp.text = direccion.cp
-        lblDelegación.text = direccion.delegacion
-        lblEstado.text = direccion.estado
-        lblPais.text = "México"
+        configTexts()
         
     }
     
@@ -70,10 +63,21 @@ class DirectionViewController: UIViewController {
                    let estado = alert.textFields![5].text
                    Persist().borrarDir()
                    Persist().guardaDireccion(calle!, numCasa!, colonia!, cp!, delegacion!, estado!)
-                   
+                   self.configTexts()
                })
                alert.addAction(btnEnviar)
                self.present(alert, animated: true, completion: nil)
+    }
+    
+    func configTexts(){
+        let direccion = Persist().obtenerDireccion()[0]
+        lblCalle.text = direccion.calle
+        lblnum.text = direccion.numCalle
+        lblColonia.text = direccion.colonia
+        lblCp.text = direccion.cp
+        lblDelegación.text = direccion.delegacion
+        lblEstado.text = direccion.estado
+        lblPais.text = "México"
     }
     
     
