@@ -55,7 +55,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
                             self.present(alert, animated: true, completion: nil)
                     }
                             
-                }
+            }
         }
         else
         {

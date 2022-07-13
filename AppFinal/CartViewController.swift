@@ -39,8 +39,28 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     }
     
     @IBOutlet weak var collectionVieww: UICollectionView!
+    
     @IBAction func comprar(_ sender: Any) {
-        
+        let fullMob = "525522958650"
+                let urlWhats = "whatsapp://send?phone=\(fullMob)&text=Hola, buen día.\n *Yuu* quiero \n comprar"
+                if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
+                    
+                    if let whatsappURL = NSURL(string: urlString) {
+                        if UIApplication.shared.canOpenURL(whatsappURL as URL) {
+                            UIApplication.shared.open(whatsappURL as URL, options: [:], completionHandler: { (Bool) in
+                                if Bool {
+                                    print("action executed succsessfully")
+                                }
+                                else {
+                                    print(Bool)
+                                }
+                                
+                            })
+                        } else {
+                            print("WhatsApp Not Found on your device")
+                        }
+                    }
+                }
     }
     
     

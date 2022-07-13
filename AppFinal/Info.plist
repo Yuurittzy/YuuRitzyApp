@@ -2,21 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string></string>
-	<key>NSCameraUsageDescription</key>
-	<string>Permite el acceso para tomar una fotografía</string>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Para estimar la ubicación de envío</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>Para estimar la ubicación de envío</string>
-	<key>UILaunchScreen</key>
-	<dict>
-		<key>UIColorName</key>
-		<string></string>
-		<key>UIImageName</key>
-		<string></string>
-	</dict>
+    <key>LSApplicationQueriesSchemes</key>
+       <array>
+      <string>whatsapp</string>
+    </array>
+	<key>UIAppFonts</key>
+	<array>
+		<string>quicksand-light.ttf</string>
+		<string>quicksand-bold.ttf</string>
+		<string>quicksand-medium.ttf</string>
+		<string>quicksand-regular.ttf</string>
+		<string>quicksand-semiBold.ttf</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -36,13 +33,12 @@
 			</array>
 		</dict>
 	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>quicksand-light.ttf</string>
-		<string>quicksand-bold.ttf</string>
-		<string>quicksand-medium.ttf</string>
-		<string>quicksand-regular.ttf</string>
-		<string>quicksand-semiBold.ttf</string>
-	</array>
+	<key>UILaunchScreen</key>
+	<dict>
+		<key>UIColorName</key>
+		<string></string>
+		<key>UIImageName</key>
+		<string></string>
+	</dict>
 </dict>
 </plist>

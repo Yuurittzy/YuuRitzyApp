@@ -25,6 +25,7 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
     override func viewWillAppear(_ animated: Bool) {
         persist = Persist().obtenerFav()
         collectionVieww.reloadData()
+        
         let dir = Persist().obtenerDireccion().first
         direction.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?"
             
