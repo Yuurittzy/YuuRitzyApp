@@ -55,7 +55,7 @@ class SecondViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let dir = Persist().obtenerDireccion().first
-        direccion.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?" 
+        direccion.text = "¿Compras desde \(dir?.delegacion ?? "") ... \(dir?.cp ?? "") ?" 
         // AL HACER TAP EN EL ICONO DE FAV SE CREAN LAS VARIABLES PARA FORMAR LA ACCION
         let tap = UITapGestureRecognizer(target: self, action: #selector(SecondViewController.tappedMe))
         icFav.addGestureRecognizer(tap)

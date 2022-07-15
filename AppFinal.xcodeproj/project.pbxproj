@@ -130,12 +130,12 @@
 				9A03ACEA286ECCC700E3DB2D /* CoreData.swift */,
 				9AEDB0A5286FF3BC006A100D /* CollectionViewCellFav.swift */,
 				9A5656D4287557DE009D9BE1 /* CollectionViewCellCart.swift */,
+				9A2EA6B6287D30D50032D3AA /* ProfileViewController.swift */,
 				9A8CDD6B28404BF500290EBE /* Main.storyboard */,
 				9A8CDD6E28404BF800290EBE /* Assets.xcassets */,
 				9A8CDD7028404BF800290EBE /* LaunchScreen.storyboard */,
 				9A8CDD7328404BF800290EBE /* Info.plist */,
 				9A03ACE7286EA65200E3DB2D /* YuuRitzyModel.xcdatamodeld */,
-				9A2EA6B6287D30D50032D3AA /* ProfileViewController.swift */,
 			);
 			path = AppFinal;
 			sourceTree = "<group>";

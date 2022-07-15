@@ -124,6 +124,21 @@ class Persist {
             return resultset
        }
     
+    func borrarPersona(){
+        if (obtenerPersona().count != 0 ){
+        for i in 0...obtenerPersona().count-1 {
+            self.managedObjectContext?.delete(self.obtenerPersona()[i])
+        }
+        
+        do {
+           try self.managedObjectContext?.save()
+        }
+        catch{
+            print("No se pudo borrar y guardar persona")
+        }
+        }
+    }
+    
     func guardaEnFav(_ nombre: String!, _ calificacion: Double, _ precio: Int) {
            // creamos un nuevo objeto de tipo "Log"
            

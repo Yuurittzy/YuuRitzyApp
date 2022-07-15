@@ -24,11 +24,12 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
    
     override func viewWillAppear(_ animated: Bool) {
         persist = Persist().obtenerFav()
-        collectionVieww.reloadData()
-        
-        let dir = Persist().obtenerDireccion().first
+        let auxdir = Persist().obtenerDireccion()
+        if ( auxdir.count > 0){
+        let dir = auxdir.first
         direction.text = "¿Compras desde \(dir!.delegacion ?? "") ... \(dir!.cp ?? "") ?"
-            
+        }
+        collectionVieww.reloadData()
     }
         
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

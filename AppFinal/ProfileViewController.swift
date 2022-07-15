@@ -15,13 +15,23 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     @IBOutlet weak var navItem: UINavigationItem!
     var auxPhoto: Data!
     var auxNombre : String!
+    var k = true
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
-       
+        let obtenerPersona = Persist().obtenerPersona()
+        
+        if (obtenerPersona.count > 0 && k){
+            tfName.text = obtenerPersona[0].nombre
+            let persona = Persist().obtenerPersona().first
+            ivPhoto.image = UIImage(data: (persona?.foto)!)
+        }
     }
     
     @IBAction func tomarFoto(_ sender: Any) {
@@ -38,7 +48,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
                     if permisos == .notDetermined {
                         AVCaptureDevice.requestAccess(for: .video) { respuesta in
                             if respuesta {
-                                self.present(ipc, animated: true,  completion: nil)
+                                print("ok")
+                             //  self.present(ipc, animated: true,  completion: nil)
                             }
                             else {
                             print ("Acceso denegado")
@@ -78,7 +89,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
         if let imagen = info[.editedImage] as? UIImage {
             ivPhoto.image = imagen
             auxPhoto = imagen.pngData()
-            auxNombre = "yuu"
+            k = false
+            
         }
         picker.dismiss(animated:true, completion: nil)
     }
@@ -88,7 +100,28 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate &
     }
     
     @IBAction func guardar(_ sender: Any) {
-        Persist().guardaPersona(auxNombre, auxPhoto)
+        k=true
+        if  tfName.text == ""{
+            let alert = UIAlertController(title: "No ha introducido ningún nombre", message: "Introduce un nombre", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+        }else {
+            if (auxPhoto != nil) {
+                auxNombre = tfName.text
+                if (Persist().obtenerPersona().count == 0) {
+                    Persist().guardaPersona(auxNombre, auxPhoto)
+                } else {
+                    Persist().borrarPersona()
+                    Persist().guardaPersona(auxNombre, auxPhoto)
+            }
+                let alert = UIAlertController(title: "Se guardaron los datos", message: "con éxito", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.cancel, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                
+            }
+            
+        }
+        
     }
    
 }

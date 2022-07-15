@@ -55,14 +55,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     Persist().guardaDireccion("", "", "", "", "", "")
                     aux = 1 //permite que la alerta solo se muestre una vez
         }
+        
     }
-    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
         if internetStatus {
-        // Verificamos si la geolocalización está activada si es que hay internet
             if CLLocationManager.locationServicesEnabled() {
                 switch admUbicacion.authorizationStatus {
                     case .notDetermined: admUbicacion.requestAlwaysAuthorization()
