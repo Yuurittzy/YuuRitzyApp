@@ -15,6 +15,7 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     var cantidad : Int = 1
     var arrayQuantity = [Int]()
     let envioCosto = 50
+    var totalAPagar = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +42,9 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     @IBOutlet weak var collectionVieww: UICollectionView!
     
     @IBAction func comprar(_ sender: Any) {
+        
         let fullMob = "525522958650"
-                let urlWhats = "whatsapp://send?phone=\(fullMob)&text=Hola, buen día.\n *Yuu* quiero \n comprar"
+                let urlWhats = "whatsapp://send?phone=\(fullMob)&text=\(mensaje())"
                 if let urlString = urlWhats.addingPercentEncoding(withAllowedCharacters: NSCharacterSet.urlQueryAllowed) {
                     
                     if let whatsappURL = NSURL(string: urlString) {
@@ -124,21 +126,48 @@ class CartViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func totalFun(){
        var aux = 0
         if (carrito.count != 0){
-        for i in 0...carrito.count-1 {
-            print(i)
-          aux += Int(carrito[i].preciofinal) * arrayQuantity[i]
-        print(aux)
-       }
-            total.text = "$ " + String(aux + envioCosto)
-            ceroCero.text="00"
+            for i in 0...carrito.count-1 {
+                print(i)
+                aux += Int(carrito[i].preciofinal) * arrayQuantity[i]
+                print(aux)
+            }
+                total.text = "$ " + String(aux + envioCosto)
+                ceroCero.text="00"
+                totalAPagar = aux + envioCosto
         }else {
             total.text = " "
             ceroCero.text=" "
             btnComprar.isEnabled = false
+            totalAPagar = 0
         }
        
     }
-    
+     
+    func mensaje() -> String {
+        let arrayCart = Persist().obtenerCart()
+        var aux = "Hola, buen día, me gustaría comprar: \n \n"
+        var cajax = "Caja"
+        for i in 0...arrayCart.count-1 {
+            if (arrayQuantity[i] > 1){
+                cajax = "Cajas"
+            }
+            else{
+                cajax = "Caja"
+            }
+            aux += "\(arrayQuantity[i]) " + cajax + " de \(arrayCart[i].nombre!.capitalized) \n"
+        }
+        print(aux)
+        aux += "\n Con un costo total de *$\(totalAPagar)*, incluyendo envío \n"
+        var auxdir = "\n *A la dirección* \n"
+        if (Persist().obtenerDireccion().count != 0){
+            let arrayDir = Persist().obtenerDireccion().first
+            auxdir += "Calle: " + arrayDir!.calle! + " Núm: " + arrayDir!.numCalle! + "\n Colonia: " + arrayDir!.colonia! + "\n CP: " + arrayDir!.cp! + "\n Delegacion/municipio: " + arrayDir!.delegacion! + "\n Estado: " + arrayDir!.estado!
+        } else{
+            auxdir = " "
+        }
+        print(aux + auxdir)
+        return aux + auxdir
+    }
     
    
     

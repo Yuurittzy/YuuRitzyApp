@@ -78,12 +78,13 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
             for i in 0...getCart.count-1 {
                 if (aux.nombre == getCart[i].nombre){
                     flag = true
-                }else {flag = false}
+                }
             }
                 
        }
         if (!flag || getCart.count == 0){
                 Persist().guardaEnCart(aux.nombre, Int(aux.precioFinal), 1)
+                flag = false
         }
        
     }
