@@ -9,12 +9,10 @@ import UIKit
 
 
 class FavViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
-  
 
     @IBOutlet weak var direction: UILabel!
     @IBOutlet weak var collectionVieww: UICollectionView!
     var persist: [Favoritos] = []
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +71,6 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
         let getCart = Persist().obtenerCart()
         persist = Persist().obtenerFav()
         let aux = persist[sender.tag]
-        print(aux)
         if (getCart.count != 0){
             for i in 0...getCart.count-1 {
                 if (aux.nombre == getCart[i].nombre){
@@ -89,20 +86,4 @@ class FavViewController: UIViewController, UICollectionViewDelegate, UICollectio
        
     }
     
-    
-    
-
-  //  @IBOutlet weak var navBar: UINavigationBar!
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

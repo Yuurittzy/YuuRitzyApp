@@ -54,7 +54,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                     let boton = UIAlertAction(title: "Ok", style: .default)
                     alert.addAction(boton)
                     self.present(alert, animated:true)
-                    Persist().guardaDireccion("", "", "", "", "", "")
+                   // Persist().guardaDireccion("", "", "", "", "", "")
                     aux = 1 //permite que la alerta solo se muestre una vez
         }
         

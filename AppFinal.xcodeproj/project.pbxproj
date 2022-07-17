@@ -408,6 +408,7 @@
 				DEVELOPMENT_TEAM = UBPUHQ32UJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppFinal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Yuu Ritzy";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permite el acceso para tomar una fotografía";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Para estimar la ubicación de envío";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Para estimar la ubicación de envío";
@@ -423,7 +424,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Yuu.Ritzy.AppFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuu.Ritzy.YuuRitzy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -441,6 +442,7 @@
 				DEVELOPMENT_TEAM = UBPUHQ32UJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AppFinal/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Yuu Ritzy";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Permite el acceso para tomar una fotografía";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Para estimar la ubicación de envío";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Para estimar la ubicación de envío";
@@ -456,7 +458,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Yuu.Ritzy.AppFinal;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Yuu.Ritzy.YuuRitzy;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
